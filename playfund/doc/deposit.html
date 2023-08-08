@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="deposit-style.css">
+    <title>deposit</title>
+</head>
+<body>
+    <header>
+        <h2>Playfunds</h2>
+        <div class="right">
+            <img src="../images/download (1).png" alt="">
+            <img src="../images/hamburger-menu.svg" alt="">
+        </div>
+    </header>
+
+    <p class="text">How much would you like to  deposit?</p>
+
+    <div class="container">
+        <div class="amount-wrap">
+            <div class="tag">$</div>
+            <div class="amount">0.00</div>
+        </div>
+
+        <div class="input-amount">
+            <div class="numb">1</div>
+            <div class="numb">2</div>
+            <div class="numb">3</div>
+            <div class="numb">4</div>
+            <div class="numb">5</div>
+            <div class="numb">6</div>
+            <div class="numb">7</div>
+            <div class="numb">8</div>
+            <div class="numb">9</div>
+            <div class="numb">0</div>
+            <div class="numb">.</div>
+            <div class="delete"><</div>
+        </div>
+
+        <div class="flex">
+            <p>Minimum amount:</p>
+        <div class="min">$5000</div>
+        </div>
+        
+        <button class="deposit">Deposit</button>
+    </div>
+</body>
+<script>
+    const amount=document.querySelector(".amount")
+    const numbs=document.querySelectorAll(".numb")
+    const del=document.querySelector(".delete")
+    numbs.forEach(numb=>{
+        numb.addEventListener("click",(e)=>{
+            let currentNumb=e.target.textContent
+            if(amount.textContent.length >20){
+                amount.textContent="0.00"
+            }
+            if(amount.textContent==="0.00"){
+                amount.textContent="" + currentNumb
+            }
+            else{
+
+                amount.textContent+=currentNumb
+            }
+            
+        })
+    })
+      
+</script>
+</html>

@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+@media screen and (max-width:600px) {
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0.8rem 1rem;
+    }
+    header h2{
+        color: rgb(187, 184, 184);
+    }
+    header .right{
+        display: flex;
+        gap:0.5rem
+    }
+    header img{
+        width: 30px;
+        object-fit: cover;
+        cursor: pointer;       
+    }
+    .text{
+        text-align: center;
+        color: rgb(102, 98, 98);
+        font-size: 1rem;
+        margin-top: 1.7rem;
+        margin-bottom: 0.7rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    } 
+h2{
+    text-align: center;
+    margin-top: 1rem;
+} 
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}  
+.container .box{
+   display: grid;
+   background: rgb(236, 234, 234);
+  grid-template-columns: 300px 1fr;
+  margin: 0 auto;
+  justify-content: center;
+  border-bottom: 1px solid silver;
+   align-items: center;
+   padding-bottom: 0.5rem;
+    padding-left: 0.7rem;
+    padding-top: 0.4rem;
+    padding-right: 0.7rem;
+}
+.box .first .title{
+    font-weight: bold;
+}
+.box .first .bank, .details{
+    margin-top: 0.2rem;
+}
+.box img{
+  width: 30px;
+  background-attachment: none;
+  cursor: pointer;
+  user-select: none;
+}
+.timer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:0.3rem
+}
+.timer img{
+    width: 20px;
+}
+.timer .time{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.btns{
+    display: flex;
+    flex-direction: column;
+    gap:0.4rem;
+    justify-content:center;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+.btns button{
+    width: 150px;
+    padding: 0.3rem 0;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    border-radius: 0.2rem;
+}
+.btns .cancel{
+    background: rgb(179, 169, 169);
+    color: white;
+}
+.btns .paid{
+    background: green;
+    color: white;
+}
+}

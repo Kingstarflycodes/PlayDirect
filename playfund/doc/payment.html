@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css">
+    <title>payment</title>
+</head>
+<body>
+    <header>
+        <h2>Playfunds</h2>
+        <div class="right">
+            <img src="../images/download (1).png" alt="">
+            <img src="../images/hamburger-menu.svg" alt="">
+        </div>
+    </header>
+
+    <h2>Make Payment</h2>
+
+    <p class="text">leave this site, open your own bank or payment platform to transfer
+        the funds to the agents account provided below.
+    </p>
+    <div class="container">
+        <div class="box">
+            <div class="first">
+                <div class="title">
+                    <p>Bank Name</p>
+                </div>
+                <div class="bank">
+                    <p>First Bank of Nigeria</p>
+                </div>
+            </div>
+            <div class="second">
+                <img src="../images/copy.png" alt="" class="copy1">
+            </div>
+           
+        </div>
+
+        <div class="box">
+            <div class="first">
+                <div class="title">
+                    <p>Bank Account Number</p>
+                </div>
+                <div class="detail">
+                    <p class="text-2">3051532120</p>
+                </div>
+            </div>
+            <div class="second">
+                <img src="../images/copy.png" alt="" class="copy2">
+            </div>
+           
+        </div>
+
+        <div class="box">
+            <div class="first">
+                <div class="title">
+                    <p>order to</p>
+                </div>
+                <div class="detail">
+                    <p class="text-3">po9067835235</p>
+                </div>
+            </div>
+            <div class="second">
+                <img src="../images/copy.png" alt="" class="copy3">
+            </div>
+           
+        </div>
+
+        <div class="box">
+            <div class="first">
+                <div class="title">
+                    <p>Amount</p>
+                </div>
+                <div class="detail">
+                    <p class="text-4">$10000</p>
+                </div>
+            </div>
+            <div class="second">
+                <img src="../images/copy.png" alt="" class="copy4">
+            </div>
+           
+        </div>
+
+
+    </div>
+
+    <div class="text">Once you've made the payment, come to back here to 
+        confirm by pressing paid.
+    </div>
+
+    <div class="text-last text">
+        complete the transaction within
+    </div>
+
+    <div class="timer">
+        <img src="../images/timer.png" alt="">
+        <div class="time">14:56</div>
+    </div>
+
+    <div class="btns">
+        <button class="cancel">Cancel</button>
+        <button class="paid">Paid</button>
+    </div>
+</body>
+
+<script>
+    const copyBtn1=document.querySelector(".copy1")
+    const bankText=document.querySelector(".bank")
+    const copyBtn2=document.querySelector(".copy2")
+    const text2=document.querySelector(".text-2")
+    const copyBtn3=document.querySelector(".copy3")
+    const text3=document.querySelector(".text-3")
+    const copyBtn4=document.querySelector(".copy4")
+    const text4=document.querySelector(".text-4")
+    function copy(text) {
+      navigator.clipboard.writeText(text)
+        alert("copied text")
+    }
+    copyBtn1.addEventListener("click",()=>{
+        copy(bankText.textContent)
+    })
+    copyBtn2.addEventListener("click",()=>{
+        copy(text2.textContent)
+    })
+    copyBtn3.addEventListener("click",()=>{
+        copy(text3.textContent)
+    })
+    copyBtn4.addEventListener("click",()=>{
+        copy(text4.textContent)
+    })
+</script>
+</html>

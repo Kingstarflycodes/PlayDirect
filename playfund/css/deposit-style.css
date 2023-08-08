@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    user-select: none;
+}
+@media screen and (max-width:600px){
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.8rem 1rem;
+}
+header h2{
+    color: rgb(187, 184, 184);
+}
+header .right{
+    display: flex;
+    gap:0.5rem
+}
+header img{
+    width: 28px;
+    cursor: pointer;       
+}
+.text{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 1.7rem;
+    margin-bottom: 0.7rem;
+}
+.container{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   gap:0.9rem;
+   text-align: center;
+   align-items: center;
+}
+.amount-wrap{
+    display: flex;
+    gap:0.1rem;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: green;
+    font-weight: bold;
+    margin: 0.4rem 0;
+}
+.amount-wrap .amount::placeholder{
+    color: green;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.input-amount{
+    margin: 1.8rem 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:3.5rem;
+    cursor: pointer;
+}
+.input-amount .numb{
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.input-amount .delete{
+    color: rgb(102, 99, 99);
+    font-weight: bold;
+}
+.container .flex{
+    display: flex;
+    gap:0.4rem
+}
+.flex p{
+    font-weight: bold;
+}
+.flex .min{
+    color: green;
+    font-weight: bold;
+}
+.container button{
+    background: green;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 1.7rem;
+    border: none;
+    font-weight: bold;
+    margin-top: 0.7rem;
+    border-radius: 0.3rem;
+    width:270px;
+}
+}

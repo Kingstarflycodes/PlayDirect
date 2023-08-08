@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/top up.css">
+    <title>Top  up</title>
+</head>
+<body>
+    <div class="top">
+        <img src="../images/download (1).png" alt="">
+        <img src="../images/hamburger-menu.svg" alt="">
+    </div>
+
+        <h2 class="header">Top Up</h2>
+
+        <div class="wrapper">
+
+    <div class="profile">
+        <div class="left">
+            <img src="../images/wallpaper13.jpg" alt="" width="90px">
+        </div>
+        <div class="right">
+            <div class="user-name">
+                <p>GENSHIN IMPACT</p>
+                <button>crystals</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="box">
+            <h2>ID or Username</h2>
+            <input type="text" placeholder="Riderezzy#2358">
+        </div>
+    </div>
+
+    <div class="recharge">
+        <h2>Select Recharge</h2>
+        <div class="flex-sub">
+            <p>60 genesis crystals</p>
+            <div class="price">Rp.16,000</div>
+        </div>
+        <div class="flex-sub">
+            <p>60 genesis crystals</p>
+            <div class="price">Rp.16,000</div>
+        </div>
+        <div class="flex-sub">
+            <p>60 genesis crystals</p>
+            <div class="price">Rp.16,000</div>
+        </div>
+        <div class="flex-sub">
+            <p>60 genesis crystals</p>
+            <div class="price">Rp.16,000</div>
+        </div>
+        <div class="flex-sub">
+            <p>60 genesis crystals</p>
+            <div class="price">Rp.16,000</div>
+        </div>
+        <div class="btns">
+            <button class="buy">Buy</button>
+            <button class="cancel">Cancel</button>
+        </div>
+    </div>
+
+    <div class="last-img">
+        <img src="../images/IMG-20230722-WA0003.jpg" alt="" width="300px">
+    </div>
+</div>
+      
+<script>
+    const flexSub=document.querySelectorAll(".flex-sub");
+    flexSub.forEach(sub=>{
+        sub.addEventListener("click",()=>{
+            sub.classList.toggle("select")
+        })
+    })
+</script>
+
+</body>
+</html>

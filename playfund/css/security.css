@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+}
+@media screen and (max-width:600px) {
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0.6rem 1rem;
+    }
+    header .left{
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: rgb(160, 152, 152);
+    }
+    header .right img{
+        width: 30px;
+    }
+    .wrapper{
+        display: flex;
+        justify-content: center;
+        gap:0.6rem;
+        width: 300px;
+        flex-direction: column;
+        margin: 0 auto;
+        margin-top: 1.4rem;
+    }
+    .wrapper .box{
+        display: flex;
+        flex-direction: column;
+        gap:0.5rem
+    }
+    .box p{
+        font-weight:540;
+        font-size: 1.1rem;
+    }
+    .box input{
+        padding: 0.7rem 0.4rem;
+        border-radius: 0.3rem;
+        outline: none;
+        border-color: rgb(224, 220, 220)
+    }
+    .btn{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 0.7rem;
+    }
+    .btn button{
+        color: white;
+        background: green;
+        border: none;
+        cursor: pointer;
+        padding: 0.4rem 0.7rem;
+        border-radius: 0.4rem;
+    }
+}

@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    user-select: none;
+}
+@media screen and (max-width:600px){
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.8rem 1rem;
+}
+header h2{
+    color: rgb(138, 135, 135);
+}
+header .right{
+    display: flex;
+    gap:0.5rem
+}
+header img{
+    width: 28px;
+    cursor: pointer;       
+}
+.wrapper{
+    margin: 0 auto;
+    max-width: 310px;
+}
+.section-one, .section-two, .section-three{
+    margin-bottom: 1.2rem;
+}
+.section-one .title{
+     color:rgb(131, 124, 124);
+     margin: 0.3rem 0;
+     font-weight: 556;
+}
+.section-one .flex-wrap{
+    display: flex;
+    flex-direction: column;
+    gap:0.3rem
+}
+.section-one .flex-wrap .flex{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.3rem;
+}
+.section-one .flex-wrap .flex .first{
+    color:rgb(131, 124, 124);
+    font-weight: 556;
+}
+.section-one .flex-wrap .flex .second{
+    font-weight: 557;
+}
+.second-head{
+    margin: 0.4rem 0;
+}
+.section-two .content{
+    color:rgb(131, 124, 124);
+    font-weight: bold;
+}
+.select-account{
+    display: flex;
+    gap:0.7rem;
+    border: 1px solid rgb(131, 124, 124);
+    padding: 0.5rem 0.6rem;
+    cursor: pointer;
+    border-radius: 0.1rem;
+}
+.selected-acc{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgb(131, 124, 124);
+    background:rgb(160, 153, 153);
+    padding: 0.5rem 1.4rem;
+    margin-top: 0.6rem;
+    cursor: pointer;
+    border-radius: 0.1rem;
+}
+.section-three{
+    border: 1px solid rgb(141, 137, 137);
+    margin-top:0.7rem;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    padding-bottom: 1rem;
+}
+.section-three .title{
+    text-align: center;
+    margin:0.4rem 0;
+}
+.section-three .flex{
+    display: flex;
+    align-items: flex-start;
+    gap:0.2rem;
+    margin-bottom: 0.5rem;
+}
+.section-three .flex .right p{
+    color:rgb(110, 107, 107);
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.4rem;
+}
+.btn button{
+    width:100%;
+    padding:0.4rem 0.8rem;
+    border: none;
+    color: white;
+    background: green;
+    cursor: pointer;
+    border-radius: 0.3rem;
+}
+}

@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    user-select: none;
+}
+@media screen and (max-width:600px){
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.8rem 1rem;
+}
+header h2{
+    color: rgb(138, 135, 135);
+}
+header .right{
+    display: flex;
+    gap:0.5rem
+}
+header img{
+    width: 28px;
+    cursor: pointer;       
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+    background: green;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+.logo img{
+    width: 80px;
+}
+.container{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:0.5rem;
+    max-width: 310px;
+    margin: 0 auto;
+    margin-top:3rem;
+}
+.container .flex{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid lightgray;
+    padding-bottom:0.7rem;
+    gap:5rem
+}
+.bottom-wrap{
+    position: fixed;
+    left: 0;
+    right: 0;
+    font-weight: bold;
+    bottom:1rem;
+    text-align: center;
+}
+.bottom-wrap .flex{
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    justify-content: center;
+}
+.bottom-wrap .flex .first, .last{
+    color: green;
+}
+.bottom-wrap p, .flex, .footer{
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+}

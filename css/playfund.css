@@ -8,9 +8,16 @@
   font-weight: 1000;
   src: url("../fonts/ExpletusSans.ttf")
 }
+@font-face {
+  font-family: "Expletus-Sans-Light";
+  src: url("../fonts/ExpletusSans.ttf")
+}
 body{
     font-family: Expletus-Sans;
     background-color: white;
+}
+button {
+  font-family: Expletus-Sans-Light;
 }
 @media screen and (max-width:800px){
 li {
@@ -93,14 +100,53 @@ header img{
 }
 .amount {
   font-size: 1.5rem;
-}
-.cash-btn {
-  width: 6em;
-  height: 2.6rem;
-  border-radius: 
+  margin: 1rem 0;
 }
 .btn-grid {
   display:grid;
   grid-template-columns: repeat(2, 1fr);
+}
+.cash-btn {
+  width: 6em;
+  height: 2.2rem;
+  border-radius: 1.1rem;
+  margin: 0.2rem;
+  border: none;
+  font-size: 1rem;
+}
+.cash-btn:first-child {
+  background-color: green;
+  opacity: .8;
+  color: white;
+}
+.reward-box {
+  width: 80%;
+  height: fit-content;
+  border: 1px solid #000;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  padding: 0.3rem 1.5rem;
+}
+.reward {
+  font-size: 0.7rem;
+  opacity: .2;
+  margin-bottom: 0.8rem;
+}
+.earned, .view {
+  font-size: 0.9rem;
+}
+.line {
+  height: 1.6rem;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+.reward-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 1rem 0;
+}
+.green-arrow {
+  color: green;
+  opacity: .8;
 }
 }

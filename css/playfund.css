@@ -40,6 +40,9 @@ header .right{
     display: flex;
     gap:0.5rem
 }
+.head-title {
+  opacity: .2;
+}
 .hamburger {
   display: block;
   cursor: pointer;
@@ -79,83 +82,25 @@ header .right{
   left: 0;
   padding: 1rem 0 0 1rem;
 }
-.head-title.active {
-  opacity: .2;
-}
 header img{
     width: 28px;
     cursor: pointer;
 }
-.search{
-    display:flex;
-    justify-content: center;
-    width: 96%;
-    margin: 0 auto;
-    margin-top: 0.5rem;
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.search input{
-    width: 96%;
-    outline: none;
-    border-radius: 0.3rem;
-    padding: 0.6rem;
-    border-color: rgb(189, 186, 186);
+.amount {
+  font-size: 1.5rem;
 }
-.top-img{
-    display:flex;
-    justify-content: center;
-    margin: 0 auto;
-    margin-top: 1rem;
+.cash-btn {
+  width: 6em;
+  height: 2.6rem;
+  border-radius: 
 }
-.top-img img{
-    width:94%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 0.5rem;
-}
-.most-played, .moba{
-    margin-left: 1rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.6rem;
-}
-.most-played-grid, .Moba-grid{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    margin: 0 0.5rem 0 0.8rem;
-    overflow: auto;
-}
-.most-played-grid .wrap, .Moba-grid .wrap{
-    display: flex;
-    align-items: center;
-}
-.wrap img{
-    width:50px;
-    height: 50px;
-    border-radius: 0.5rem;
-    object-fit: cover;
-    margin-right: 0.5rem;
-}
-.wrap {
-    border-bottom: 1px solid silver;
-    padding-bottom: 0.4rem;
-    margin-right:0.6rem;
-    cursor: pointer;
-    margin-bottom: 0.4rem;
-    width: 320px;
-}
-.wrap:nth-of-type(even) {
-  margin-left: 1rem;
-}
-.wrap .arrow{
-    font-weight: bold;
-    font-size: 1.3rem;
-    color: rgb(187, 181, 181);
-    margin-top: 1rem;
-}
-.arrow {
-  margin-left: 6rem;
-}
-.game-desc {
-  opacity: .2;
-  font-size: 0.8rem;
+.btn-grid {
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 }

@@ -113,11 +113,15 @@ header img{
   margin: 0.2rem;
   border: none;
   font-size: 1rem;
+  cursor: pointer;
 }
 .cash-btn:first-child {
   background-color: green;
   opacity: .8;
   color: white;
+}
+.cash-btn:last-child {
+  color: rgb(0, 0, 0);
 }
 .reward-box {
   width: 80%;
@@ -148,5 +152,79 @@ header img{
 .green-arrow {
   color: green;
   opacity: .8;
+}
+.activity-bar {
+  width: 78%;
+  padding: 1rem 0 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  display: flex;
+  justify-content: space-between;
+}
+.activity-bar p {
+  font-size: 0.8rem;
+  opacity: .8;
+}
+.wrap {
+    cursor: pointer;
+    margin: 1rem 0 0 0;
+    width: 78%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.wrap img {
+  width: 50px;
+  height: 50px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-right: 0.5rem;
+}
+.game-name {
+  font-size: 0.8rem;
+}
+.description {
+  opacity: .2;
+  font-size: 0.8rem;
+}
+.game-amount {
+  font-size: 0.7rem;
+  position: absolute;
+  right: 0;
+  top: 50;
+}
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40%;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.preloader-image {
+  width: 3.5rem;
+  opacity: .2;
+  margin-bottom: 0.4rem;
+  animation: loading 0.75s ease infinite;
+}
+@keyframes loading {
+  from {opacity: .1;}
+  to {opacity: .2;}
+}
+.preloader-text {
+  text-align: center;
+  width: 60%;
+  opacity: .2;
+  font-size: 1.1rem;
+  line-height: 1.1;
 }
 }

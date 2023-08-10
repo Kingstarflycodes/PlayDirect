@@ -8,6 +8,12 @@
     <title>My PlayFunds</title>
 </head>
 <body>
+  
+  <div class="preloader">
+    <img class="preloader-image" src="../images/Next.png" />
+    <p class="preloader-text">Hold on, we are matching you with the best agent for your transaction</p>
+  </div>
+  
     <header>
         <h2 class="head-title">Playfunds</h2>
         <ul class="nav-menu">
@@ -61,6 +67,70 @@
           <p class="green-arrow">></p>
         </div>
       </div>
+      <div class="activity-bar">
+        <p>Activity</p>
+        <p>View All</p>
+      </div>
+      <div class="wrap">
+        <div class="game-img">
+          <img src="../images/wallpaper13.jpg" alt="">
+        </div>
+        <div class="other">
+          <div class="game-name">Free Fire Top Up</div>
+          <div class="description">
+            <small>Last Friday at 3:00PM</small>
+          </div>
+        </div>
+        <div class="game-amount">-8,500</div>
+      </div>
+      <div class="wrap">
+        <div class="game-img">
+          <img src="../images/wallpaper13.jpg" alt="">
+        </div>
+        <div class="other">
+          <div class="game-name">League of Legends: Wild Rift</div>
+          <div class="description">
+            <small>Last Friday at 3:00PM</small>
+          </div>
+        </div>
+        <div class="game-amount">-8,500</div>
+      </div>
+      <div class="wrap">
+        <div class="game-img">
+          <img src="../images/wallpaper13.jpg" alt="">
+        </div>
+        <div class="other">
+          <div class="game-name">Call of Duty Mobile</div>
+          <div class="description">
+            <small>Last Friday at 3:00PM</small>
+          </div>
+        </div>
+        <div class="game-amount">-8,500</div>
+      </div>
+      <div class="wrap">
+        <div class="game-img">
+          <img src="../images/wallpaper13.jpg" alt="">
+        </div>
+        <div class="other">
+          <div class="game-name">Cashback</div>
+          <div class="description">
+            <small>Last Friday at 3:00PM</small>
+          </div>
+        </div>
+        <div class="game-amount">+500</div>
+      </div>
+      <div class="wrap">
+        <div class="game-img">
+          <img src="../images/wallpaper13.jpg" alt="">
+        </div>
+        <div class="other">
+          <div class="game-name">Deposit</div>
+          <div class="description">
+            <small>Last Friday at 3:00PM</small>
+          </div>
+        </div>
+        <div class="game-amount">+90,500</div>
+      </div>
     </main>
     
     
@@ -75,6 +145,26 @@
       })
       
       
+      const gameAmountDivs = document.querySelectorAll('.game-amount');
+      
+      gameAmountDivs.forEach(gameAmountDiv => {
+        const gameAmountText = gameAmountDiv.textContent;
+        const gameAmount = parseFloat(gameAmountText.replace(/,/g, '')); // Removing commas and parsing as a float
+      
+        if (gameAmount > 0) {
+          gameAmountDiv.style.color = 'green';
+        } else if (gameAmount < 0) {
+          gameAmountDiv.style.color = 'red';
+        }
+      });
+      
+      window.addEventListener('load', () => {
+          setTimeout(() => {
+              document.querySelector('.preloader').classList.add('hidden');
+          }, 3000); // 2000 milliseconds = 2 seconds
+      });
+
+      
     </script>
 </body>
-</html>
+</html>;

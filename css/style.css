@@ -136,7 +136,6 @@ header img{
 }
 .wrap {
     border-bottom: 1px solid silver;
-    padding-bottom: 0.4rem;
     margin-right:0.6rem;
     cursor: pointer;
     margin-bottom: 0.4rem;
@@ -145,14 +144,14 @@ header img{
 .wrap:nth-of-type(even) {
   margin-left: 1rem;
 }
-.wrap .arrow{
+.wrap {
     font-weight: bold;
-    font-size: 1.3rem;
-    color: rgb(187, 181, 181);
     margin-top: 1rem;
 }
-.arrow {
+i {
+  font-size: 1.5rem;
   margin-left: 6rem;
+  opacity: .2;
 }
 .game-desc {
   opacity: .2;

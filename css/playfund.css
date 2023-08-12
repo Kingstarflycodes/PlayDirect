@@ -149,9 +149,10 @@ header img{
   grid-template-columns: repeat(2, 1fr);
   margin: 1rem 0;
 }
-.green-arrow {
+.bx-chevron-right {
   color: green;
   opacity: .8;
+  font-size: 1.4rem;
 }
 .activity-bar {
   width: 78%;

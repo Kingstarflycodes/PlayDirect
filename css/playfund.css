@@ -192,7 +192,7 @@ header img{
   right: 0;
   top: 50;
 }
-.preloader {
+/* .preloader {
   position: fixed;
   top: 0;
   left: 0;
@@ -226,5 +226,5 @@ header img{
   opacity: .2;
   font-size: 1.1rem;
   line-height: 1.1;
-}
+} */
 }

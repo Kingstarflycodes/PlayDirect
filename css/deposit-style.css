@@ -1,5 +1,5 @@
 *{
-    margin: 0;
+    margin: 0
     padding: 0;
     box-sizing: border-box;
 }
@@ -19,6 +19,9 @@ header h2{
 header .right{
     display: flex;
     gap:0.5rem
+}
+a {
+  text-decoration: none;
 }
 header img{
     width: 28px;
@@ -90,5 +93,8 @@ header img{
     margin-top: 0.7rem;
     border-radius: 0.3rem;
     width:270px;
+}
+.deposit a {
+  color: white;
 }
 }

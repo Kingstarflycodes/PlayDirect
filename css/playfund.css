@@ -118,6 +118,8 @@ header img{
 .cash-btn:first-child {
   background-color: green;
   opacity: .8;
+}
+.cash-btn:first-child a {
   color: white;
 }
 .cash-btn:last-child {

@@ -1,3 +1,5 @@
+/////////Index page image slider
+/////////Index page image slider
 const slides = document.querySelectorAll('.slide');
 const slider = document.querySelector('.slider');
 const sliderChecks = document.querySelectorAll('.check');

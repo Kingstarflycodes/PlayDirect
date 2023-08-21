@@ -176,15 +176,19 @@ header img{
     margin-top: 0.5rem;
     margin-bottom: 0.6rem;
 }
-.most-played-grid, .Moba-grid{
+.most-played-grid, .moba-grid{
     display:grid;
     grid-template-columns: repeat(2,1fr);
     margin: 0 0.5rem 0 0.8rem;
     overflow: auto;
 }
-.most-played-grid .wrap, .Moba-grid .wrap{
+.most-played-grid .wrap, .moba-grid .wrap{
     display: flex;
     align-items: center;
+}
+
+most-played-grid::-webkit-scrollbar, moba-grid::-webkit-scrollbar {
+  width: 0;
 }
 .wrap img{
     width:50px;

@@ -5,7 +5,7 @@
 }
 @font-face {
   font-family: "Expletus-Sans";
-  font-weight: 1000;
+  /*font-weight: 1000;*/
   src: url("../fonts/ExpletusSans.ttf")
 }
 body{
@@ -35,6 +35,30 @@ header{
     display: flex;
     justify-content: space-between;
     margin: 0.8rem 1rem;
+}
+.head {
+  display: flex;
+  margin-left: -1rem;
+  transition: all 0.3s ease-in-out;
+}
+.head.active {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 42%;
+  margin: 0;
+}
+#close {
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+#close.active {
+  font-size: 1.5rem;
+  visibility: visible;
+  cursor: pointer;
+}
+.head-title {
+    letter-spacing: 1px;
 }
 header .right{
     display: flex;

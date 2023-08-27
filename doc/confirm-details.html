@@ -9,40 +9,43 @@
 </head>
 <body>
     <header>
-        <h2 class="head-title">Playfunds</h2>
+        <div class="head">
+          <p id="close">&times;</p>
+          <h2 class="head-title">Playfunds</h2>
+        </div>
         <ul class="nav-menu">
           <li class="nav-item">
-            <img src="../images/Next.png" />
-            <a href="../doc/playfund.html" class="nav-link">My PlayFunds</a>
-          </li>
-          <li class="nav-item">
-            <img src="../images/Google-play.png" />
-            <a href="#" class="nav-link">Play Direct</a>
-          </li>
-          <li class="nav-item">
-            <img src="../images/Facebook-messenger.png" />
-            <a href="../doc/message.html" class="nav-link">Messages & Notification</a>
-          </li>
-          <li class="nav-item">
-            <img src="../images/Comment.png" />
-            <a href="../doc/help.html" class="nav-link">Help & Feedback</a>
+            <img src="../images/Envelope.png" />
+            <a href="./contact.html" class="nav-link">Contact Us</a>
           </li>
           <li class="nav-item">
             <img src="../images/Settings-alt.png" />
-            <a href="../doc/setting.html" class="nav-link">Settings</a>
+            <a href="./setting.html" class="nav-link">Settings</a>
           </li>
           <li class="nav-item">
-            <img src="../images/Envelope.png" />
-            <a href="../doc/contact.html" class="nav-link">Contact Us</a>
+            <img src="../images/Comment.png" />
+            <a href="./help.html" class="nav-link">Help & Feedback</a>
+          </li>
+          <!-- <li class="nav-item">
+            <img src="../images/Google-play.png" />
+            <a href="#" class="nav-link">Play Direct</a> -->
+          </li>
+          <li class="nav-item">
+            <img src="../images/Facebook-messenger.png" />
+            <a href="./message.html" class="nav-link">Messages & Notification</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Next.png" />
+            <a href="./playfund.html" class="nav-link">My PlayFunds</a>
           </li>
         </ul>
         <div class="right">
-          <img src="../images/Facebook-messenger.png" width="45px" height="30px">
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
+            <img src="../images/Facebook-messenger.png" width="45px" height="30px">
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
         </div>
     </header>
 
@@ -53,7 +56,7 @@
 
         <div class="section-one">
             <div class="title">
-                <p>Lorem ipsum dolor, sit amet.</p>
+                <p>Kindly review the transaction details</p>
             </div>
             <div class="flex-wrap">
                 <div class="flex">
@@ -68,12 +71,12 @@
 
                 <div class="flex">
                     <div class="first">You are to transfer</div>
-                    <div class="second">1000</div>
+                    <div class="second">1,000</div>
                 </div>
 
                 <div class="flex">
                     <div class="first">Account to be credited</div>
-                    <div class="second">10060</div>
+                    <div class="second">10,060</div>
                 </div>
             </div>
         </div>
@@ -84,7 +87,7 @@
 
         <div class="section-two">
             <div class="content">
-                <p>select the account you would like for the  bank transfer.</p>
+                <p>select the account you would like to use for the  bank transfer.</p>
             </div>
         </div>
         
@@ -98,7 +101,8 @@
                 <p>PalmPay</p>
             </div>
             <div class="acc-number">
-                <p>*******1516</p>
+                <p>*******</p>
+                <p>1516</p>
             </div>
         </div>
 
@@ -112,9 +116,7 @@
                         <input type="checkbox" name="agree">
                     </div>
                     <div class="right">
-                        <p>Lorem ipsum dolor sit amet consectetur,
-                     adipisicing elit.
-                        </p>
+                        <p>I will not include crypto related words like BTC ETH CRYPTO in the payment Referance.</p>
                     </div>
                 </div>
                 <div class="flex">
@@ -122,9 +124,7 @@
                         <input type="checkbox" name="agree">
                     </div>
                     <div class="right">
-                        <p>Lorem ipsum dolor sit amet consectetur,
-                     adipisicing elit.
-                        </p>
+                        <p>I will transfer the money from a bank account with the same name as my BVN</p>
                     </div>
                 </div>
             </div>
@@ -136,6 +136,8 @@
     
     
     <script>
+    
+      // hamburger menu
       const hamburger = document.querySelector(".hamburger");
       const navMenu = document.querySelector(".nav-menu");
       const headTitle = document.querySelector(".head-title");
@@ -145,6 +147,14 @@
         navMenu.classList.toggle("active");
         headTitle.classList.toggle("active");
       })
+      
+      // close button function
+      const close = document.getElementById('close');
+        close.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.close();
+            history.back();
+        });
     </script>
 </body>
 </html>

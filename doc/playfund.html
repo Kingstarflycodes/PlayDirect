@@ -16,31 +16,34 @@
   </div> -->
   
     <header>
-        <h2 class="head-title">Playfunds</h2>
+        <div class="head">
+          <p id="close">&times;</p>
+          <h2 class="head-title">Playfunds</h2>
+        </div>
         <ul class="nav-menu">
           <li class="nav-item">
-            <img src="../images/Next.png" />
-            <a href="./playfund.html" class="nav-link">My PlayFunds</a>
-          </li>
-          <li class="nav-item">
-            <img src="../images/Google-play.png" />
-            <a href="#" class="nav-link">Play Direct</a>
-          </li>
-          <li class="nav-item">
-            <img src="../images/Facebook-messenger.png" />
-            <a href="./doc/message.html" class="nav-link">Messages & Notification</a>
-          </li>
-          <li class="nav-item">
-            <img src="../images/Comment.png" />
-            <a href="./doc/help.html" class="nav-link">Help & Feedback</a>
+            <img src="../images/Envelope.png" />
+            <a href="./contact.html" class="nav-link">Contact Us</a>
           </li>
           <li class="nav-item">
             <img src="../images/Settings-alt.png" />
-            <a href="./doc/setting.html" class="nav-link">Settings</a>
+            <a href="./setting.html" class="nav-link">Settings</a>
           </li>
           <li class="nav-item">
-            <img src="../images/Envelope.png" />
-            <a href="./doc/contact.html" class="nav-link">Contact Us</a>
+            <img src="../images/Comment.png" />
+            <a href="./help.html" class="nav-link">Help & Feedback</a>
+          </li>
+          <!-- <li class="nav-item">
+            <img src="./images/Google-play.png" />
+            <a href="#" class="nav-link">Play Direct</a> -->
+          </li>
+          <li class="nav-item">
+            <img src="../images/Facebook-messenger.png" />
+            <a href="./message.html" class="nav-link">Messages & Notification</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Next.png" />
+            <a href="./playfund.html" class="nav-link">My PlayFunds</a>
           </li>
         </ul>
         <div class="right">
@@ -137,6 +140,7 @@
     
     
     <script>
+      //hamburger menu
       const hamburger = document.querySelector(".hamburger");
       const navMenu = document.querySelector(".nav-menu");
       
@@ -145,7 +149,7 @@
         navMenu.classList.toggle("active");
       })
       
-      
+      //Amount function
       const gameAmountDivs = document.querySelectorAll('.game-amount');
       
       gameAmountDivs.forEach(gameAmountDiv => {
@@ -158,6 +162,14 @@
           gameAmountDiv.style.color = 'red';
         }
       });
+      
+      // close button function
+      const close = document.getElementById('close');
+        close.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.close();
+            history.back();
+        });
       
       // window.addEventListener('load', () => {
       //     setTimeout(() => {

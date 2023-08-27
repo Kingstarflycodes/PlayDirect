@@ -5,17 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/deposit-style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>deposit</title>
 </head>
 <body>
     <header>
-        <h2>Playfunds</h2>
+        <div class="head">
+          <p id="close">&times;</p>
+          <h2 class="head-title">Playfunds</h2>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <img src="../images/Envelope.png" />
+            <a href="./contact.html" class="nav-link">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Settings-alt.png" />
+            <a href="./setting.html" class="nav-link">Settings</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Comment.png" />
+            <a href="./help.html" class="nav-link">Help & Feedback</a>
+          </li>
+          <!-- <li class="nav-item">
+            <img src="./images/Google-play.png" />
+            <a href="#" class="nav-link">Play Direct</a> -->
+          </li>
+          <li class="nav-item">
+            <img src="../images/Facebook-messenger.png" />
+            <a href="./message.html" class="nav-link">Messages & Notification</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Next.png" />
+            <a href="./playfund.html" class="nav-link">My PlayFunds</a>
+          </li>
+        </ul>
         <div class="right">
-            <img src="../images/download (1).png" alt="">
-            <img src="../images/hamburger-menu.svg" alt="">
+            <img src="../images/Facebook-messenger.png" width="45px" height="30px">
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
         </div>
     </header>
 
+    <main class="main">
     <p class="text">How much would you like to  deposit?</p>
 
     <div class="container">
@@ -24,28 +59,29 @@
             <div class="amount">0.00</div>
         </div>
 
-        <div class="input-amount">
-            <div class="numb">1</div>
-            <div class="numb">2</div>
-            <div class="numb">3</div>
-            <div class="numb">4</div>
-            <div class="numb">5</div>
-            <div class="numb">6</div>
-            <div class="numb">7</div>
-            <div class="numb">8</div>
-            <div class="numb">9</div>
-            <div class="numb">0</div>
-            <div class="numb">.</div>
-            <div class="delete"><</div>
-        </div>
+        <ul class="input-amount">
+            <li class="numb">1</li>
+            <li class="numb">2</li>
+            <li class="numb">3</li>
+            <li class="numb">4</li>
+            <li class="numb">5</li>
+            <li class="numb">6</li>
+            <li class="numb">7</li>
+            <li class="numb">8</li>
+            <li class="numb">9</li>
+            <li class="numb">.</li>
+            <li class="numb">0</li>
+            <i class='delete bx bx-chevron-left'></i>
+        </ul>
 
         <div class="flex">
             <p>Minimum amount:</p>
-        <div class="min">$5000</div>
+            <p class="min">$5000</p>
         </div>
         
         <button class="deposit"><a href="./confirm-details.html">Deposit</a></button>
     </div>
+    </main>
 </body>
 <script>
     const amount=document.querySelector(".amount")
@@ -67,6 +103,25 @@
             
         })
     })
+    
+    // hamburger menu
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      const headTitle = document.querySelector(".head-title");
+    
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        headTitle.classList.toggle("active");
+      })
+      
+      // close button function
+      const close = document.getElementById('close');
+        close.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.close();
+            history.back();
+        });
       
 </script>
 </html>

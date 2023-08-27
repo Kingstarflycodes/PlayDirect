@@ -5,7 +5,6 @@
 }
 @font-face {
   font-family: "Expletus-Sans";
-  font-weight: 1000;
   src: url("../fonts/ExpletusSans.ttf")
 }
 @font-face {
@@ -36,19 +35,32 @@ a {
   margin-left: 0.8rem;
   font-size: 1.2rem;
   width: 65%;
-  border-bottom: 1px solid rgba(0, 0, 0, .2)
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
 header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0.8rem 1rem;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 42%;
+  margin: 0;
+}
+#close {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.head-title {
+    letter-spacing: 1px;
+    opacity: .2;
 }
 header .right{
     display: flex;
-    gap:0.5rem
-}
-.head-title {
-  opacity: .2;
+    gap:0.5rem;
 }
 .hamburger {
   display: block;
@@ -100,6 +112,7 @@ header img{
 }
 .amount {
   font-size: 1.5rem;
+  font-weight: bold;
   margin: 1rem 0;
 }
 .btn-grid {
@@ -114,6 +127,7 @@ header img{
   border: none;
   font-size: 1rem;
   cursor: pointer;
+  font-weight: bold;
 }
 .cash-btn:first-child {
   background-color: green;
@@ -132,6 +146,7 @@ header img{
   border-radius: 1rem;
   margin-top: 1rem;
   padding: 0.3rem 1.5rem;
+  font-weight: bold;
 }
 .reward {
   font-size: 0.7rem;
@@ -162,6 +177,7 @@ header img{
   border-bottom: 1px solid rgba(0, 0, 0, .2);
   display: flex;
   justify-content: space-between;
+  font-weight: bold;
 }
 .activity-bar p {
   font-size: 0.8rem;
@@ -174,6 +190,7 @@ header img{
     display: flex;
     align-items: center;
     position: relative;
+    font-weight: bold;
 }
 .wrap img {
   width: 50px;

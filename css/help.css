@@ -3,35 +3,106 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family: sans-serif;
-    user-select: none;  
+@font-face {
+    font-family: "Expletus-Sans";
+    src: url("../fonts/ExpletusSans.ttf");
 }
-.wrapper{
-    margin: 0 0.7rem;
+body, button{
+    font-family: Expletus-Sans;
+    background-color: white;
+    user-select: none;
 }
 @media screen and (max-width:600px){
+li {
+  list-style: none;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+}
+.nav-link {
+  margin-left: 0.8rem;
+  font-size: 1.2rem;
+  width: 65%;
+  border-bottom: 1px solid rgba(0, 0, 0, .2)
+}
 header{
     display: flex;
     justify-content: space-between;
     margin: 0.8rem 1rem;
 }
-header h2{
-    color: rgb(138, 135, 135);
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 62%;
+  margin: 0;
+}
+#close {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.head-title {
+  letter-spacing: 1px;
+  opacity: .2;
 }
 header .right{
     display: flex;
     gap:0.5rem
 }
+.hamburger {
+  display: block;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+.nav-menu {
+  position: fixed;
+  left: -100%;
+  top: 50px;
+  gap: 0;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 1100;
+  text-align: left;
+  transition: 0.3s;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+.nav-menu.active {
+  left: 0;
+  padding: 1rem 0 0 1rem;
+}
 header img{
     width: 28px;
-    cursor: pointer;       
+    cursor: pointer;
 }
 .problem-category{
     border: 1px solid gray;
     margin: 0 auto;
     border-radius: 0.4rem;
-    max-width: 320px;
+    width: 92%;
     margin-top: 1.6rem;
     padding: 0.5rem ;
 }
@@ -56,28 +127,28 @@ header img{
     border: 1px solid gray;
     margin: 0 auto;
     border-radius: 0.4rem;
-    max-width: 320px;
-    margin-top: 1rem;
-    padding-left: 1rem;
-    padding-top: 0.5rem;
-}
-.details-wrapper .title{
-    color: rgb(161, 159, 159);
-    margin-top: 0.2rem;
+    width: 92%;
+    height: 9rem;
+    margin-top: 2rem;
+    padding: .5rem 0 0 1rem;
 }
 .details-wrapper textarea{
     border: none;
     outline: none;
-    padding: 0.5rem 0;
     resize: none;
-    height: 80px;
-    width: 200px;
+    height: 90px;
+    width: 92%;
+    font-family: "Expletus-Sans";
+}
+textarea::placeholder {
+    color: rgba(0, 0, 0, .1);
+    font-size: 1rem;
 }
 .contact-info{
     border: 1px solid gray;
     margin: 0 auto;
     border-radius: 0.4rem;
-    max-width: 320px;
+    width: 92%;
     margin-top: 1rem;
     padding-left: 1rem;
     padding-top: 0.5rem;
@@ -87,60 +158,51 @@ header img{
     outline: none;
     padding: 0.5rem 0;
     resize: none;
-    width: 230px;
-}
-.contact-info .title{
-    color: rgb(138, 135, 135);
+    width: 92%;
+    font-family: "Expletus-Sans";
 }
 .upload{
     border: 1px solid gray;
     margin: 0 auto;
     border-radius: 0.4rem;
-    max-width: 320px;
+    width: 92%;
     margin-top: 1rem;
     padding-bottom: 0.7rem;
     padding-left: 1rem;
     padding-top: 0.5rem;
 }
-.upload .title, .text{
-    color: rgb(138, 135, 135);
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+.title, .text, .select{
+    color: rgba(0, 0, 0, .3);
+    font-size: 1rem;
+    margin: .3rem 0 0.4rem 0;
 }
-.contain{
-    position: relative;
-    cursor: pointer;
-}
-.contain input{
-    opacity: 0;
-    width: 30px;
-    cursor:pointer;
-}
-.contain .add{
-    position: absolute;
-    color: rgb(153, 148, 148);
-    top:0;
-    z-index: -1;
-    border: 2px solid rgb(158, 154, 154);
+.add{
+    width: 2.5rem;
+    height: 2.5rem;
+    color: rgba(0, 0, 0, .2);
+    border: 1px solid rgba(0, 0, 0, .2);
     font-weight: bold;
     padding:0.1rem 0.5rem;
     cursor: pointer;
-    border-radius: 0.3rem;
+    border-radius: 0.4rem;
+    font-size: 1rem;
 }
 .btn{
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 0.7rem;
+    height: 30px;
+    width: 70%;
+    margin: 4.5rem auto 0 auto;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
-.btn button{
-    color: white;
+.btn .send{
+    margin-top: 13px;
+    color: #329832;
     border: none;
-    background: green;
+    background: #fff;
     cursor: pointer;
-    border-radius: 0.5rem;
-    padding: 0.6rem 1rem;
-    width: 120px;
-
+    width: 60px;
+    height: 30px;
+    font-size: 1.1rem;
 }
 }

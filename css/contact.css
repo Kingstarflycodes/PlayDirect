@@ -106,34 +106,38 @@ header img{
     width: 5rem;
     height: 5rem;
     border-radius: .6rem;
-    margin: 0 auto;
-    background: green;
+    margin: 3rem auto;
+    background: #329832;
 }
 .logo img{
     width: 3.5rem;
+    filter: invert(100%);
 }
 .container{
     display:flex;
     justify-content: center;
     flex-direction: column;
-    gap:0.5rem;
-    max-width: 310px;
+    width: 90%;
     margin: 0 auto;
     margin-top:3rem;
 }
 .container .flex{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     border-bottom: 1px solid lightgray;
     padding-bottom:0.7rem;
     gap:5rem
+}
+.flex p {
+    width: auto;
+    font-size: 1.3rem;
 }
 .bottom-wrap{
     position: fixed;
     left: 0;
     right: 0;
-    font-weight: bold;
-    bottom:1rem;
+    bottom: 4rem;
     text-align: center;
 }
 .bottom-wrap .flex{
@@ -143,10 +147,10 @@ header img{
     justify-content: center;
 }
 .bottom-wrap .flex .first, .last{
-    color: green;
+    color: #329832;
 }
 .bottom-wrap p, .flex, .footer{
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
 }
 }

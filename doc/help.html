@@ -100,6 +100,7 @@
             <div>
                 <input type="file" id="fileInput" multiple style="display: none;">
                 <button class="add" onclick="openFilePicker()">+</button>
+                <div id="fileNames"></div>
             </div>
           
         </div>
@@ -129,8 +130,7 @@
             window.close();
             history.back();
         });
-    </script>
-    <script>
+    
         function openFilePicker() {
             var fileInput = document.getElementById('fileInput');
             fileInput.click();
@@ -142,7 +142,10 @@
             if (selectedFiles.length >= 3) {
                 // You have at least 3 selected files
                 // Process the selected files here
-                console.log("Selected files:", selectedFiles);
+                fileNames.innerHTML = "Selected files:<br>";
+                for (var i = 0; i < selectedFiles.length; i++) {
+                    fileNames.innerHTML += selectedFiles[i].name + "<br>";
+                }
             } else {
                 // Handle the case when less than 3 files are selected
                 alert("Please select at least 3 files.");

@@ -98,7 +98,8 @@
                 <p class="select">[select up to 3]</p>
             </div>
             <div>
-                <button class="add">+</button>
+                <input type="file" id="fileInput" multiple style="display: none;">
+                <button class="add" onclick="openFilePicker()">+</button>
             </div>
           
         </div>
@@ -127,6 +128,25 @@
             event.preventDefault();
             window.close();
             history.back();
+        });
+    </script>
+    <script>
+        function openFilePicker() {
+            var fileInput = document.getElementById('fileInput');
+            fileInput.click();
+        }
+
+        document.getElementById('fileInput').addEventListener('change', function () {
+            var selectedFiles = this.files;
+
+            if (selectedFiles.length >= 3) {
+                // You have at least 3 selected files
+                // Process the selected files here
+                console.log("Selected files:", selectedFiles);
+            } else {
+                // Handle the case when less than 3 files are selected
+                alert("Please select at least 3 files.");
+            }
         });
     </script>
    

@@ -9,25 +9,80 @@
 </head>
 <body>
     <header>
-        <h2>Settings</h2>
+        <div class="head">
+          <p id="close">&times;</p>
+          <h2 class="head-title">Settings</h2>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <img src="../images/Next.png" />
+            <a href="./playfund.html" class="nav-link">My PlayFunds</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Google-play.png" />
+            <a href="#" class="nav-link">Play Direct</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Facebook-messenger.png" />
+            <a href="./message.html" class="nav-link">Messages & Notification</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Comment.png" />
+            <a href="./help.html" class="nav-link">Help & Feedback</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Settings-alt.png" />
+            <a href="./setting.html" class="nav-link">Settings</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Envelope.png" />
+            <a href="./contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
         <div class="right">
-            <img src="../images/download (1).png" alt="">
-            <img src="../images/hamburger-menu.svg" alt="">
+            <img src="../images/Facebook-messenger.png" width="45px" height="30px">
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
         </div>
     </header>
     <div class="container">
-        <a class="flex" href="#">
-            <div class="icon">
-                <img src="../images/lock.png" alt="">
-            </div>
-            <p>Security</p>
-        </a>
-        <a class="flex" href="#">
-            <div class="icon">
-                <img src="../images/settings.png" alt="">
-            </div>
-            <p>Delete Account</p>
-        </div>
-    </a>
+        <ul class="setting-list">
+          <li class="setting-item">
+            <img src="../images/lock.png" />
+            <a href="./playfund.html" class="setting-link">My PlayFunds</a>
+          </li>
+          <li class="setting-item">
+            <img src="../images/Trash.png" />
+            <a href="#" class="setting-link">Play Direct</a>
+          </li>
+        </ul>
+    </div>
+    
+    
+    
+    <script>
+      
+      // hamburger menu
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      const headTitle = document.querySelector(".head-title");
+    
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        headTitle.classList.toggle("active");
+      })
+      
+      // close button function
+      const close = document.getElementById('close');
+        close.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.close();
+            history.back();
+        });
+    </script>
 </body>
 </html>

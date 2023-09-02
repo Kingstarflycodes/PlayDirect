@@ -9,19 +9,74 @@
 </head>
 <body>
     <header>
-        <div class="left">Delete Account</div>
+        <div class="head">
+          <p id="close">&times;</p>
+          <h2 class="head-title">Delete Account</h2>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <img src="../images/Next.png" />
+            <a href="./playfund.html" class="nav-link">My PlayFunds</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Google-play.png" />
+            <a href="#" class="nav-link">Play Direct</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Facebook-messenger.png" />
+            <a href="./message.html" class="nav-link">Messages & Notification</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Comment.png" />
+            <a href="./help.html" class="nav-link">Help & Feedback</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Settings-alt.png" />
+            <a href="./setting.html" class="nav-link">Settings</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Envelope.png" />
+            <a href="./contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
         <div class="right">
-            <img src="../images/hamburger-menu.svg" alt="">
+            <img src="../images/Facebook-messenger.png" width="45px" height="30px">
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
         </div>
     </header>
 
     <div class="container">
         <div class="text">
             You will lose all your information by deleting your account.
-            This cannot be undone.
+            This cannot be undone
         </div>
         <button>Delete Account</button>
     </div>
-
+    
+    <script>
+      
+      // hamburger menu
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      const headTitle = document.querySelector(".head-title");
+    
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        headTitle.classList.toggle("active");
+      })
+      
+      // close button function
+      const close = document.getElementById('close');
+        close.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.close();
+            history.back();
+        });
+    </script>
 </body>
 </html>

@@ -51,12 +51,13 @@
     </header>
 
     <main class="main">
+      <p id="errorText" style="color: red;"></p>
     <p class="text">How much would you like to  deposit?</p>
 
     <div class="container">
         <div class="amount-wrap">
-            <div class="tag">$</div>
-            <div class="amount">0.00</div>
+            <p class="tag">N</p>
+            <p id="depositAmount" class="amount">0.00</p>
         </div>
 
         <ul class="input-amount">
@@ -76,10 +77,10 @@
 
         <div class="flex">
             <p>Minimum amount:</p>
-            <p class="min">$5000</p>
+            <p class="min">N5000</p>
         </div>
         
-        <button class="deposit"><a href="./confirm-details.html">Deposit</a></button>
+        <button onclick="checkDeposit()" class="deposit">Deposit</button>
     </div>
     </main>
 </body>
@@ -123,5 +124,15 @@
             history.back();
         });
       
+      //Amount pass to Next page
+      function checkDeposit() {
+            var deposit = parseInt(document.getElementById("depositAmount").textContent.replace(/,/g, ''));
+            if (deposit <= 4999 || isNaN(deposit)) {
+                document.getElementById("errorText").innerText = "Minimum deposit is N5,000";
+            } else {
+                // Redirect to the second page and pass the deposit value as a query parameter
+                window.location.href = "confirm-details.html?deposit=" + deposit;
+            }
+        }
 </script>
 </html>

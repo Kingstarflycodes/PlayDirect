@@ -9,30 +9,87 @@
 </head>
 <body>
     <header>
-        <div class="left">security</div>
+        <div class="head">
+          <p id="close">&times;</p>
+          <h2 class="head-title">Security</h2>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <img src="../images/Next.png" />
+            <a href="./doc/playfund.html" class="nav-link">My PlayFunds</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Google-play.png" />
+            <a href="#" class="nav-link">Play Direct</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Facebook-messenger.png" />
+            <a href="./doc/message.html" class="nav-link">Messages & Notification</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Comment.png" />
+            <a href="./doc/help.html" class="nav-link">Help & Feedback</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Settings-alt.png" />
+            <a href="./doc/setting.html" class="nav-link">Settings</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Envelope.png" />
+            <a href="./doc/contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
         <div class="right">
-            <img src="../images/hamburger-menu.svg" alt="">
+            <img src="../images/Facebook-messenger.png" width="45px" height="30px">
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
         </div>
     </header>
 
     <div class="wrapper">
         <div class="box">
             <p>Change password</p>
-            <input type="password" placeholder="enter previous password">
+            <input type="password" placeholder="Enter previous password">
         </div>
 
         <div class="box">
             <p>New password</p>
-            <input type="password" placeholder="enter new password">
+            <input type="password" placeholder="Enter new password">
         </div>
         <div class="box">
             <p>Confirm password</p>
-            <input type="password" placeholder="enter new password again">
+            <input type="password" placeholder="Confirm new password again">
         </div>
         <div class="btn">
             <button class="save-password">Save changes</button>
         </div>
         
     </div>
+    
+    
+    <script>
+      
+      // hamburger menu
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      const headTitle = document.querySelector(".head-title");
+    
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        headTitle.classList.toggle("active");
+      })
+      
+      // close button function
+      const close = document.getElementById('close');
+        close.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.close();
+            history.back();
+        });
+    </script>
 </body>
 </html>

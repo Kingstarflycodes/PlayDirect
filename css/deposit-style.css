@@ -116,7 +116,7 @@ header img{
     letter-spacing: 1px;
 }
 .container{
-  width: 100%;
+   width: 100%;
    display: flex;
    justify-content: center;
    flex-direction: column;
@@ -144,7 +144,6 @@ header img{
     grid-template-columns: repeat(3,1fr);
     row-gap:3rem;
     column-gap: 5rem;
-    cursor: pointer;
     width: 90%;
 }
 .input-amount .numb{

@@ -60,7 +60,7 @@
             <p id="depositAmount" class="amount">0.00</p>
         </div>
 
-        <ul class="input-amount">
+        <ul id="myList" class="input-amount">
             <li class="numb">1</li>
             <li class="numb">2</li>
             <li class="numb">3</li>
@@ -85,25 +85,31 @@
     </main>
 </body>
 <script>
-    const amount=document.querySelector(".amount")
-    const numbs=document.querySelectorAll(".numb")
-    const del=document.querySelector(".delete")
-    numbs.forEach(numb=>{
-        numb.addEventListener("click",(e)=>{
-            let currentNumb=e.target.textContent
-            if(amount.textContent.length >20){
-                amount.textContent="0.00"
-            }
-            if(amount.textContent==="0.00"){
-                amount.textContent="" + currentNumb
-            }
-            else{
+    const amount = document.querySelector(".amount");
+    const numbs = document.querySelectorAll(".numb");
+    const del = document.querySelector(".delete");
 
-                amount.textContent+=currentNumb
-            }
-            
-        })
-    })
+    numbs.forEach((numb) => {
+      numb.addEventListener("click", (e) => {
+        let currentNumb = e.target.textContent;
+        if (amount.textContent.length > 20) {
+          amount.textContent = "0.00";
+        }
+        if (amount.textContent === "0.00") {
+          amount.textContent = "" + currentNumb;
+        } else {
+          amount.textContent += currentNumb;
+        }
+      });
+    });
+
+    del.addEventListener("click", () => {
+      if (amount.textContent.length > 0) {
+        // Remove the last character from the text content
+        amount.textContent = amount.textContent.slice(0, -1);
+      }
+    });
+
     
     // hamburger menu
       const hamburger = document.querySelector(".hamburger");

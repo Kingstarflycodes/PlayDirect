@@ -5,34 +5,107 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/message.css">
-    <title>Message & notifications</title>
+    <title>Message & Notifications</title>
 </head>
 <body>
     <header>
-       <div class="flex">
-        <p>Messages &</p>
-        <p>Notifications</p>
-       </div>
+        <div class="head">
+          <p id="close">&times;</p>
+          <h2 class="head-title">Messages &<br />Notification</h2>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <img src="../images/Next.png" />
+            <a href="./doc/playfund.html" class="nav-link">My PlayFunds</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Google-play.png" />
+            <a href="#" class="nav-link">Play Direct</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Facebook-messenger.png" />
+            <a href="./doc/message.html" class="nav-link">Messages & Notification</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Comment.png" />
+            <a href="./doc/help.html" class="nav-link">Help & Feedback</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Settings-alt.png" />
+            <a href="./doc/setting.html" class="nav-link">Settings</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Envelope.png" />
+            <a href="./doc/contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
         <div class="right">
-            <img src="../images/hamburger-menu.svg" alt="">
+            <img src="../images/Facebook-messenger.png" width="45px" height="30px">
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
         </div>
     </header>
 
-    <div class="flex-wrap">
-        <div class="flex">
-            <div class="icon">icon</div>
-            <p class="text">we have successfully process your...</p>
-        </div>
-
-        <div class="flex">
-            <div class="icon">icon</div>
-            <p class=" text active">Account successfully funded...</p>
-        </div>
-
-        <div class="flex">
-            <div class="icon">icon</div>
-            <p class="text">welcome to playfunds...</p>
-        </div>
+    <div class="container">
+        <ul class="message-list">
+          <li class="message-item" onclick="changeColor(this)">
+            <img class="message-img" src="../images/Next.png" />
+            <p class="message-text">we have successfully processed your ...</p>
+          </li>
+          <li class="message-item" onclick="changeColor(this)">
+            <img class="message-img" src="../images/Next.png" />
+            <p class="message-text">Account successfully funded ...</p>
+          </li>
+          <li class="message-item" onclick="changeColor(this)">
+            <img class="message-img" src="../images/Next.png" />
+            <p class="message-text">Welcome to Playfunds ...</p>
+          </li>
+        </ul>
     </div>
+    
+    
+    <script>
+      
+      // hamburger menu
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      const headTitle = document.querySelector(".head-title");
+    
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        headTitle.classList.toggle("active");
+      })
+      
+      // close button function
+      const close = document.getElementById('close');
+        close.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.close();
+            history.back();
+        });
+        
+        function changeColor(element) {
+          element.classList.add("selected");
+
+          // Save the selected state to local storage for persistence
+          localStorage.setItem("selectedElement", element.innerHTML);
+        }
+
+        // Check if there's a selected element in local storage
+        const selectedElement = localStorage.getItem("selectedElement");
+        if (selectedElement) {
+          // Find and highlight the previously selected element
+          const messageItems = document.querySelectorAll(".message-item");
+          messageItems.forEach(item => {
+            if (item.innerHTML === selectedElement) {
+              item.classList.add("selected");
+            }
+          });
+        }
+    </script>
 </body>
 </html>

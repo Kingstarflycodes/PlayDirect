@@ -51,19 +51,21 @@
 
     <div class="container">
         <ul class="message-list">
-          <li class="message-item" onclick="changeColor(this)">
-            <img class="message-img" src="../images/Next.png" />
-            <p class="message-text">we have successfully processed your ...</p>
+          <li class="message-item">
+            <img src="../images/Next.png" />
+            <p class="message-text">We have successfully processed your ...</p>
           </li>
-          <li class="message-item" onclick="changeColor(this)">
-            <img class="message-img" src="../images/Next.png" />
+          <li class="message-item">
+            <img src="../images/Next.png" />
             <p class="message-text">Account successfully funded ...</p>
           </li>
-          <li class="message-item" onclick="changeColor(this)">
-            <img class="message-img" src="../images/Next.png" />
+          <li class="message-item">
+            <img src="../images/Next.png" />
             <p class="message-text">Welcome to Playfunds ...</p>
           </li>
         </ul>
+
+
     </div>
     
     
@@ -88,24 +90,25 @@
             history.back();
         });
         
-        function changeColor(element) {
-          element.classList.add("selected");
+        // Clicked message function
+        const messageItems = document.querySelectorAll('.message-item');
 
-          // Save the selected state to local storage for persistence
-          localStorage.setItem("selectedElement", element.innerHTML);
-        }
+        messageItems.forEach(item => {
+          item.addEventListener('click', () => {
+            // Check if the clicked item already has the 'clicked' class
+            const isClicked = item.classList.contains('clicked');
 
-        // Check if there's a selected element in local storage
-        const selectedElement = localStorage.getItem("selectedElement");
-        if (selectedElement) {
-          // Find and highlight the previously selected element
-          const messageItems = document.querySelectorAll(".message-item");
-          messageItems.forEach(item => {
-            if (item.innerHTML === selectedElement) {
-              item.classList.add("selected");
+            // Remove 'clicked' class from all items
+            //messageItems.forEach(item => item.classList.remove('clicked'));
+
+            // Add 'clicked' class to the clicked item if it wasn't already clicked
+            if (!isClicked) {
+            item.classList.add('clicked');
             }
           });
-        }
+        });
+
+
     </script>
 </body>
 </html>

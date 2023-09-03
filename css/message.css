@@ -104,6 +104,8 @@ header img{
 }
 .container{
     margin: 1rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
 .container img{
     width: 27px;
@@ -122,19 +124,10 @@ header img{
   padding-bottom: .3rem;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
-.message-img.selected {
-  filter: invert(50%);
+.message-item.clicked img {
+  filter: opacity(.2);
 }
-.message-text.selected{
+.message-item.clicked .message-text {
   color: rgba(0, 0, 0, .2);
-}
-a{
-    text-decoration: none;
-    color: black;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    gap:0.4rem;
-    margin-bottom: 0.4rem;
 }
 }

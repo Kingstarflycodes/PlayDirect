@@ -198,18 +198,6 @@ header img{
 .most-played-text, .moba-text{
     margin: 1rem 0 0 1rem;
 }
-/*.most-played-grid, .moba-grid{
-    display: flex;
-    justify-content: space-between;
-}
-.most-played-grid .wrap, .moba-grid .wrap{
-    display: flex;
-    align-items: center;
-}
-
-most-played-grid::-webkit-scrollbar, moba-grid::-webkit-scrollbar {
-  width: 0;
-}*/
 .swiper {
   width: 92%;
   margin: 1rem auto;

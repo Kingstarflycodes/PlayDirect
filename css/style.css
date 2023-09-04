@@ -207,7 +207,7 @@ header img{
     align-items: center;
     margin-right:0.6rem;
     cursor: pointer;
-    width: 320px;
+    width: 100%;
     font-weight: bold;
     margin-top: 0.4rem;
 }

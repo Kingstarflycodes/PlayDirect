@@ -195,16 +195,12 @@ header img{
   margin: -4px 0 0 0;
 }
 
-.most-played, .moba{
-    margin-left: 1rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.6rem;
+.most-played-text, .moba-text{
+    margin: 1rem 0 0 1rem;
 }
-.most-played-grid, .moba-grid{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    margin: 0 0.5rem 0 0.8rem;
-    overflow: auto;
+/*.most-played-grid, .moba-grid{
+    display: flex;
+    justify-content: space-between;
 }
 .most-played-grid .wrap, .moba-grid .wrap{
     display: flex;
@@ -213,6 +209,19 @@ header img{
 
 most-played-grid::-webkit-scrollbar, moba-grid::-webkit-scrollbar {
   width: 0;
+}*/
+.swiper {
+  width: 92%;
+  margin: 1rem auto;
+}
+.wrap {
+    display: flex;
+    align-items: center;
+    margin-right:0.6rem;
+    cursor: pointer;
+    width: 320px;
+    font-weight: bold;
+    margin-top: 0.4rem;
 }
 .wrap img{
     width:50px;
@@ -221,21 +230,11 @@ most-played-grid::-webkit-scrollbar, moba-grid::-webkit-scrollbar {
     object-fit: cover;
     margin-right: 0.5rem;
 }
-.wrap {
-    margin-right:0.6rem;
-    cursor: pointer;
-    width: 320px;
-    font-weight: bold;
-    margin-top: 0.4rem;
-}
-.wrap:nth-of-type(even) {
-  margin-left: 1rem;
-}
 .wrap-child {
   margin-left: 0.4rem;
   display: flex;
   align-items: center;
-  width: 250px;
+  width: 300px;
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, .1);
   padding: 0.5rem 0 0.8rem 0;

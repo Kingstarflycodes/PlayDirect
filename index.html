@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <title>home</title>
 </head>
 <body>
@@ -78,24 +79,10 @@
       </div>
     </div>
 
-    <h2 class="most-played">Most Played</h2>
-    <div class="most-played-grid">
-
-        <div class="wrap">
-            <div class="game-img">
-                <img src="./images/wallpaper13.jpg" alt="">
-            </div>
-            <div class="wrap-child">
-              <div class="other">
-                <div class="game-name">Free Fire</div>
-                <div class="game-desc">
-                  <small>Battle royal Action shooter</small>
-                </div>
-              </div c>
-              <i class='bx bx-chevron-right'></i>
-            </div>
-        </div>
-
+    <h2 class="most-played-text">Most Played</h2>
+    <div class="swiper">
+    <div class="swiper-wrapper most-played">
+      <div class="swiper-slide">
         <div class="wrap">
             <div class="game-img">
                 <img src="./images/wallpaper13.jpg" alt="">
@@ -126,7 +113,23 @@
             </div>
         </div>
 
-         <div class="wrap">
+        <div class="wrap">
+            <div class="game-img">
+                <img src="./images/wallpaper13.jpg" alt="">
+            </div>
+            <div class="wrap-child">
+              <div class="other">
+                <div class="game-name">Free Fire</div>
+                <div class="game-desc">
+                  <small>Battle royal Action shooter</small>
+                </div>
+              </div>
+              <i class='bx bx-chevron-right'></i>
+            </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="wrap">
             <div class="game-img">
                 <img src="./images/wallpaper13.jpg" alt="">
             </div>
@@ -170,12 +173,14 @@
               <i class='bx bx-chevron-right'></i>
             </div>
         </div>
-
+      </div>
+    </div>
     </div>
 
-    <h2 class="moba">Moba</h2>
-    <div class="moba-grid">
-
+    <h2 class="moba-text">Moba</h2>
+    <div class="swiper">
+    <div class="swiper-wrapper moba">
+      <div class="swiper-slide">
         <div class="wrap">
             <div class="game-img">
                 <img src="./images/wallpaper13.jpg" alt="">
@@ -220,7 +225,8 @@
               <i class='bx bx-chevron-right'></i>
             </div>
         </div>
-
+      </div>
+      <div class="swiper-slide">
          <div class="wrap">
             <div class="game-img">
                 <img src="./images/wallpaper13.jpg" alt="">
@@ -265,10 +271,11 @@
               <i class='bx bx-chevron-right'></i>
             </div>
         </div>
-
+      </div>
         
     </div>
     
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
     <script>
       const hamburger = document.querySelector(".hamburger");
@@ -301,6 +308,14 @@
         close.classList.remove("active");
       }))
       
+      
+      const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 1.1,
+        spaceBetween: 10,
+      });
       
     </script>
 

@@ -44,7 +44,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 46%;
+  width: 48%;
   margin: 0;
 }
 #close {
@@ -104,8 +104,6 @@ header img{
 }
 .container{
     margin: 1rem;
-    padding-bottom: 3rem;
-    border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
 .container img{
     width: 27px;
@@ -118,9 +116,9 @@ header img{
   height: 3rem;
 }
 .message-text {
-  margin-left: 0.8rem;
+  margin-left: 0.9rem;
   font-size: .9rem;
-  width: 70%;
+  width: 80%;
   padding-bottom: .3rem;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
@@ -129,5 +127,20 @@ header img{
 }
 .message-item.clicked .message-text {
   color: rgba(0, 0, 0, .2);
+}
+.line-container {
+  width: 80%;
+  margin: 10rem auto 0 auto;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  position: relative;
+}
+.end-text {
+  background: #fff;
+  padding: .2rem .8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, .1);
 }
 }

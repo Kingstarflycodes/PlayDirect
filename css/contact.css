@@ -126,17 +126,17 @@ header img{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    gap:5rem
 }
 .line {
   width: 75%;
   height: 1px;
   background: rgba(0, 0, 0, .1);
-  margin: .3rem auto;
+  margin: .3rem auto 1.3rem auto;
 }
 .flex p {
     width: auto;
-    font-size: 1.3rem;
+    font-size: .9rem;
+    font-weight: bold;
 }
 .bottom-wrap{
     position: fixed;
@@ -154,8 +154,9 @@ header img{
 .bottom-wrap .flex .first, .last{
     color: #329832;
 }
-.bottom-wrap p, .flex, .footer{
+.bottom-wrap p, .flex p, .footer{
     margin-bottom: 0.4rem;
-    font-size: 1rem;
+    font-size: .8rem;
+    font-weight: bold;
 }
 }

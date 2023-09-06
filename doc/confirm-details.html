@@ -130,7 +130,7 @@
             </div>
         </div>
         <div class="btn">
-            <button class="deposit">Deposit</button>
+            <button onclick="passTotalAmount()" class="deposit">Deposit</button>
         </div>
     </div>
     
@@ -169,7 +169,12 @@
         // Format and display the values with commas for thousands separators
         document.getElementById("outputDeposit").innerText = "N" + deposit.toLocaleString();
         document.getElementById("percent").innerText = "N" + percent.toLocaleString();
-        document.getElementById("totalAmount").innerText = "N" + totalAmount.toLocaleString()
+        document.getElementById("totalAmount").innerText = "N" + totalAmount.toLocaleString();
+        
+        function passTotalAmount() {
+          // Redirect to Page 3 with totalAmount as a query parameter
+          window.location.href = `payment.html?totalAmount=${totalAmount}`;
+        }
     </script>
 </body>
 </html>

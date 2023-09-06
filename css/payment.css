@@ -3,73 +3,153 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family: sans-serif;
-}
 @font-face {
-  font-family: "Expletus-Sans";
-  font-weight: 1000;
-  src: url("../fonts/ExpletusSans.ttf")
+    font-family: "Expletus-Sans";
+    /*font-weight: 1000; */
+    src: url("../fonts/ExpletusSans.ttf");
 }
-body{
+body, button{
     font-family: Expletus-Sans;
     background-color: white;
+    user-select: none;
 }
-@media screen and (max-width:600px) {
-    header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0.8rem 1rem;
-    }
-    header h2{
-        color: rgb(187, 184, 184);
-    }
-    header .right{
-        display: flex;
-        gap:0.5rem
-    }
-    header img{
-        width: 30px;
-        object-fit: cover;
-        cursor: pointer;       
-    }
-    .text{
-        text-align: center;
-        color: rgb(102, 98, 98);
-        font-size: 1rem;
-        margin-top: 1.7rem;
-        margin-bottom: 0.7rem;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-    } 
-h2{
-    text-align: center;
-    margin-top: 1rem;
-} 
-.container{
+@media screen and (max-width:600px){
+li {
+  list-style: none;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+}
+.nav-link {
+  margin-left: 0.8rem;
+  font-size: 1.2rem;
+  width: 65%;
+  border-bottom: 1px solid rgba(0, 0, 0, .2)
+}
+header{
     display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-}  
-.container .box{
-   display: grid;
-   background: rgb(236, 234, 234);
-  grid-template-columns: 300px 1fr;
-  margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.8rem 1rem;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 42%;
+  margin: 0;
+}
+#close {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.head-title {
+  letter-spacing: 1px;
+  opacity: .2;
+}
+header .right{
+    display: flex;
+    gap:0.5rem
+}
+.hamburger {
+  display: block;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+.nav-menu {
+  position: fixed;
+  left: -100%;
+  top: 50px;
+  gap: 0;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 1100;
+  text-align: left;
+  transition: 0.3s;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+.nav-menu.active {
+  left: 0;
+  padding: 1rem 0 0 1rem;
+}
+header img{
+    width: 28px;
+    cursor: pointer;
+}
+.guide-container {
+  width: 86%;
+  border: none;
+  position: relative;
+  margin: 4rem 0 0 2.2rem;
+}
+.guide-bar-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  border: none;
+  background: rgba(0, 0, 0, .1);
+  display: flex;
   justify-content: center;
-  border-bottom: 1px solid silver;
-   align-items: center;
-   padding-bottom: 0.5rem;
-    padding-left: 0.7rem;
-    padding-top: 0.4rem;
-    padding-right: 0.7rem;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  left: -17px;
+  top: -40px;
 }
-.box .first .title{
-    font-weight: bold;
+.guide-head-text{
+  font-size: 1.3rem;
+  position: absolute;
+  top: -2.2rem;
+  left: 2.2rem;
 }
-.box .first .bank, .details{
-    margin-top: 0.2rem;
+.guide-text {
+  width: 100%;
+  padding: .3rem 0 .4rem .5rem;
+  border-left: 1px solid rgba(0, 0, 0, .1)
+}
+.details-container{
+  width: 91%;
+  display: flex;
+  flex-direction: column;
+  margin: .3rem auto;
+  background: rgba(0, 0, 0, .1);
+  border-radius: .2rem;
+}  
+.box{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: .1rem auto;
+  padding: .4rem 1rem;
+}
+.box:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 .box img{
   width: 30px;
@@ -77,42 +157,90 @@ h2{
   cursor: pointer;
   user-select: none;
 }
+.first p:first-child {
+  color: rgba(0, 0, 0, .2);
+  font-size: .9rem;
+}
+.guide2-container {
+  width: 84%;
+  height: 3rem;
+  border-left: 1px solid rgba(0, 0, 0, .1);
+  margin: 1rem auto 3rem auto;
+  padding-left: .4rem;
+  position: relative;
+}
+.guide2-bar-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  border: none;
+  background: rgba(0, 0, 0, .1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  bottom: -40px;
+  left: -17px;
+}
+.guide2-text {
+  position: absolute;
+  left: 1.8rem;
+  bottom: -2.7rem;
+}
+.complete-text {
+  text-align: center;
+  width: 80%;
+  margin: 4rem auto 1rem auto;
+}
 .timer{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    gap:0.3rem
+    margin-bottom: 1.5rem;
 }
 .timer img{
     width: 20px;
+    margin-right: .2rem;
 }
 .timer .time{
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.9rem;
+    margin-left: .2rem;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 .btns{
     display: flex;
     flex-direction: column;
-    gap:0.4rem;
+    gap: .4rem;
     justify-content:center;
     align-items: center;
     margin-top: 0.5rem;
 }
 .btns button{
-    width: 150px;
-    padding: 0.3rem 0;
-    cursor: pointer;
-    border: none;
-    font-weight: bold;
-    border-radius: 0.2rem;
-}
-.btns .cancel{
-    background: rgb(179, 169, 169);
-    color: white;
+  padding: 0.4rem 0;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  border-radius: 0.2rem;
+  letter-spacing: 1px;
 }
 .btns .paid{
-    background: green;
-    color: white;
+  width: 91%;
+  background: #329832;
+  color: white;
+}
+.pop {
+  display: none;
+  position: absolute;     
+  background-color: rgba(0, 0, 0, .7);
+  color: white;            
+  padding: 8px;
+  border: 2px solid #329832;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 }

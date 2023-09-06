@@ -9,125 +9,133 @@
 </head>
 <body>
     <header>
-        <h2>Playfunds</h2>
+        <div class="head">
+          <p id="close">&times;</p>
+          <h2 class="head-title">PlayFunds</h2>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <img src="../images/Next.png" />
+            <a href="./doc/playfund.html" class="nav-link">My PlayFunds</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Google-play.png" />
+            <a href="#" class="nav-link">Play Direct</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Facebook-messenger.png" />
+            <a href="./doc/message.html" class="nav-link">Messages & Notification</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Comment.png" />
+            <a href="./doc/help.html" class="nav-link">Help & Feedback</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Settings-alt.png" />
+            <a href="./doc/setting.html" class="nav-link">Settings</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Envelope.png" />
+            <a href="./doc/contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
         <div class="right">
-            <img src="../images/download (1).png" alt="">
-            <img src="../images/hamburger-menu.svg" alt="">
+            <img src="../images/Facebook-messenger.png" width="45px" height="30px">
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
         </div>
     </header>
 
-    <h2>Make Payment</h2>
-
-    <p class="text">leave this site, open your own bank or payment platform to transfer
-        the funds to the agents account provided below.
+    <div class="guide-container">
+      <p class="guide-bar-circle">1</p>
+      <p class="guide-head-text">Make Payment</p>
+      <p class="guide-text">Leave this site, open your own bank or payment platform to transfer the funds to the agents account provided below.
     </p>
-    <div class="container">
+    </div>
+    <div class="details-container">
         <div class="box">
             <div class="first">
-                <div class="title">
-                    <p>Bank Name</p>
-                </div>
-                <div class="bank">
-                    <p>First Bank of Nigeria</p>
-                </div>
+                <p>Bank Name</p>
+                <p class="text1">First Bank of Nigeria</p>
             </div>
-            <div class="second">
-                <img src="../images/copy.png" alt="" class="copy1">
-            </div>
-           
+            <img src="../images/copy.png" alt="" class="copy1">
         </div>
 
         <div class="box">
             <div class="first">
-                <div class="title">
-                    <p>Bank Account Number</p>
-                </div>
-                <div class="detail">
-                    <p class="text-2">3051532120</p>
-                </div>
+                <p>Bank Account Number</p>
+                <p class="text2">3051532120</p>
             </div>
-            <div class="second">
-                <img src="../images/copy.png" alt="" class="copy2">
+            <img src="../images/copy.png" alt="" class="copy2">
+        </div>
+        
+        <div class="box">
+            <div class="first">
+                <p>Bank Account Name</p>
+                <p class="text3">Providence Oghenetega Osiobe</p>
             </div>
-           
+            <img src="../images/copy.png" alt="" class="copy3">
         </div>
 
         <div class="box">
             <div class="first">
-                <div class="title">
-                    <p>order to</p>
-                </div>
-                <div class="detail">
-                    <p class="text-3">po9067835235</p>
-                </div>
+                <p>order to</p>
+                <p class="text4">po9067835235</p>
             </div>
-            <div class="second">
-                <img src="../images/copy.png" alt="" class="copy3">
-            </div>
-           
+            <img src="../images/copy.png" alt="" class="copy4">
         </div>
 
         <div class="box">
             <div class="first">
-                <div class="title">
-                    <p>Amount</p>
-                </div>
-                <div class="detail">
-                    <p class="text-4">$10000</p>
-                </div>
+                <p>Amount</p>
+                <p class="text5">10,000</p>
             </div>
-            <div class="second">
-                <img src="../images/copy.png" alt="" class="copy4">
-            </div>
-           
+            <img src="../images/copy.png" alt="" class="copy5">
         </div>
-
 
     </div>
 
-    <div class="text">Once you've made the payment, come to back here to 
+    <div class="guide2-container">
+      <p class="guide2-text">Once you've made the payment, come back here to 
         confirm by pressing paid.
+      </p>
+      <p class="guide2-bar-circle">2</p>
     </div>
 
-    <div class="text-last text">
-        complete the transaction within
-    </div>
+    <p class="complete-text">complete the transaction within</p>
 
     <div class="timer">
         <img src="../images/timer.png" alt="">
-        <div class="time">14:56</div>
+        <div class="time">15:00</div>
     </div>
 
     <div class="btns">
         <button class="cancel">Cancel</button>
         <button class="paid">Paid</button>
     </div>
+    
+    <p class="pop">copied successfully</p>
 </body>
 
 <script>
-    const copyBtn1=document.querySelector(".copy1")
-    const bankText=document.querySelector(".bank")
-    const copyBtn2=document.querySelector(".copy2")
-    const text2=document.querySelector(".text-2")
-    const copyBtn3=document.querySelector(".copy3")
-    const text3=document.querySelector(".text-3")
-    const copyBtn4=document.querySelector(".copy4")
-    const text4=document.querySelector(".text-4")
-    function copy(text) {
-      navigator.clipboard.writeText(text)
-        alert("copied text")
-    }
-    copyBtn1.addEventListener("click",()=>{
-        copy(bankText.textContent)
-    })
-    copyBtn2.addEventListener("click",()=>{
-        copy(text2.textContent)
-    })
-    copyBtn3.addEventListener("click",()=>{
-        copy(text3.textContent)
-    })
-    copyBtn4.addEventListener("click",()=>{
-        copy(text4.textContent)
-    })
+    //copy text function
+    const copyOne = document.querySelector('.copy1');
+    const textOne = document.querySelector('.text1');
+    const pop = document.querySelector('.pop');
+    
+    copyOne.addEventListener('click', () => {
+      // Copy text to clipboard
+      const textToCopy = textOne.innerText;
+      navigator.clipboard.writeText(textToCopy);
+      // Show the "copied successfully" message
+      pop.style.display = 'block';
+      // Hide the message after 1.5 seconds
+      setTimeout(() => {
+          pop.style.display = 'none';
+      }, 1500);
+    });
 </script>
 </html>

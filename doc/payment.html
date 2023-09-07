@@ -8,6 +8,12 @@
     <title>payment</title>
 </head>
 <body>
+    <!-- preloader -->
+    <div class="preloader">
+    <img class="preloader-image" src="../images/Next.png" />
+    <p class="preloader-text">Hold on, we are matching you with the best agent for your transaction</p>
+  </div>
+  
     <header>
         <div class="head">
           <p id="close">&times;</p>
@@ -121,6 +127,25 @@
 </body>
 
 <script>
+    // hamburger menu
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      const headTitle = document.querySelector(".head-title");
+    
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        headTitle.classList.toggle("active");
+      })
+      
+      // close button function
+      const close = document.getElementById('close');
+        close.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.close();
+            history.back();
+        });
+
     //copy text function
     const copyOne = document.querySelector('.copy1');
     const textOne = document.querySelector('.text1');
@@ -144,6 +169,13 @@
     const totalAmount = parseFloat(urlParams.get('totalAmount'));
 
     // Display the totalAmount value on Page 3
-    document.getElementById("totalAmountDisplay").innerText = "$" + totalAmount.toLocaleString()
+    document.getElementById("totalAmountDisplay").innerText = "$" + totalAmount.toLocaleString();
+    
+    //preloader
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            document.querySelector('.preloader').classList.add('hidden');
+        }, 3000);
+    });
 </script>
 </html>

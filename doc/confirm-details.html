@@ -113,7 +113,7 @@
             <div class="flex-wrap">
                 <div class="flex">
                     <div class="left">
-                        <input type="checkbox" name="agree">
+                        <input type="checkbox" name="agree" id="checkbox1">
                     </div>
                     <div class="right">
                         <p>I will not include crypto related words like BTC ETH CRYPTO in the payment Referance.</p>
@@ -121,7 +121,7 @@
                 </div>
                 <div class="flex">
                     <div class="left">
-                        <input type="checkbox" name="agree">
+                        <input type="checkbox" name="agree" id="checkbox2">
                     </div>
                     <div class="right">
                         <p>I will transfer the money from a bank account with the same name as my BVN</p>
@@ -129,6 +129,7 @@
                 </div>
             </div>
         </div>
+        <p id="error-message" style="color:red"></p>
         <div class="btn">
             <button onclick="passTotalAmount()" class="deposit">Deposit</button>
         </div>
@@ -171,10 +172,21 @@
         document.getElementById("percent").innerText = "N" + percent.toLocaleString();
         document.getElementById("totalAmount").innerText = "N" + totalAmount.toLocaleString();
         
+        //Pass To Next Page
         function passTotalAmount() {
-          // Redirect to Page 3 with totalAmount as a query parameter
-          window.location.href = `payment.html?totalAmount=${totalAmount}`;
+          const checkbox1 = document.getElementById('checkbox1');
+          const checkbox2 = document.getElementById('checkbox2');
+          const errorMessage = document.getElementById('error-message');
+
+          if (checkbox1.checked && checkbox2.checked) {
+            // Both checkboxes are checked, proceed to the next page
+            window.location.href = `payment.html?totalAmount=${totalAmount}`;
+          } else {
+            // Display an error message
+            errorMessage.textContent = "Check options";
+          }
         }
+
     </script>
 </body>
 </html>

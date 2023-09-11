@@ -216,4 +216,9 @@ header img{
     cursor: pointer;
     border-radius: 0.3rem;
 }
+#error-message {
+  font-size: .9rem;
+  margin: 0 auto;
+  text-align: center;
+}
 }

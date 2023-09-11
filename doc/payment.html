@@ -149,8 +149,17 @@
     //copy text function
     const copyOne = document.querySelector('.copy1');
     const textOne = document.querySelector('.text1');
+    const copyTwo = document.querySelector('.copy2');
+    const textTwo = document.querySelector('.text2');
+    const copyThree = document.querySelector('.copy3');
+    const textThree = document.querySelector('.text3');
+    const copyFour = document.querySelector('.copy4');
+    const textFour = document.querySelector('.text4');
+    const copyFive = document.querySelector('.copy5');
+    const textFive = document.querySelector('.text5');
     const pop = document.querySelector('.pop');
     
+    // Copy One
     copyOne.addEventListener('click', () => {
       // Copy text to clipboard
       const textToCopy = textOne.innerText;
@@ -163,6 +172,57 @@
       }, 1500);
     });
     
+    //Copy Two
+    copyTwo.addEventListener('click', () => {
+      // Copy text to clipboard
+      const textToCopy = textTwo.innerText;
+      navigator.clipboard.writeText(textToCopy);
+      // Show the "copied successfully" message
+      pop.style.display = 'block';
+      // Hide the message after 1.5 seconds
+      setTimeout(() => {
+          pop.style.display = 'none';
+      }, 1500);
+    });
+    
+    //Copy Three
+    copyThree.addEventListener('click', () => {
+      // Copy text to clipboard
+      const textToCopy = textThree.innerText;
+      navigator.clipboard.writeText(textToCopy);
+      // Show the "copied successfully" message
+      pop.style.display = 'block';
+      // Hide the message after 1.5 seconds
+      setTimeout(() => {
+          pop.style.display = 'none';
+      }, 1500);
+    });
+    
+    //Copy Four
+    copyFour.addEventListener('click', () => {
+      // Copy text to clipboard
+      const textToCopy = textFour.innerText;
+      navigator.clipboard.writeText(textToCopy);
+      // Show the "copied successfully" message
+      pop.style.display = 'block';
+      // Hide the message after 1.5 seconds
+      setTimeout(() => {
+          pop.style.display = 'none';
+      }, 1500);
+    });
+    
+    //Copy Five
+    copyFive.addEventListener('click', () => {
+      // Copy text to clipboard
+      const textToCopy = textFive.innerText;
+      navigator.clipboard.writeText(textToCopy);
+      // Show the "copied successfully" message
+      pop.style.display = 'block';
+      // Hide the message after 1.5 seconds
+      setTimeout(() => {
+          pop.style.display = 'none';
+      }, 1500);
+    });
     
     // Get the totalAmount value from the URL query parameter
     const urlParams = new URLSearchParams(window.location.search);

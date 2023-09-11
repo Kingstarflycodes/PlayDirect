@@ -115,7 +115,7 @@
 
     <div class="timer">
         <img src="../images/timer.png" alt="">
-        <div class="time">15:00</div>
+        <p class="time" id="countdown">15:00</p>
     </div>
 
     <div class="btns">
@@ -237,5 +237,27 @@
             document.querySelector('.preloader').classList.add('hidden');
         }, 3000);
     });
+    
+    // Set the date and time to count down to
+        var countdownDate = new Date().getTime() + 15 * 60 * 1000; // 15 minutes from now
+        // Update the countdown every second
+        var countdown = document.getElementById("countdown");
+        var x = setInterval(function() {
+            // Get the current date and time
+            var now = new Date().getTime();
+
+            // Calculate the time remaining
+            var timeRemaining = countdownDate - now;
+            // Calculate minutes and seconds
+            var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+            // Display the countdown timer
+            countdown.innerHTML = minutes + "m " + seconds + "s ";
+            // When the countdown is over, display a message
+            if (timeRemaining < 0) {
+                clearInterval(x);
+                countdown.innerHTML = "Transaction expired";
+            }
+        }, 1000);
 </script>
 </html>

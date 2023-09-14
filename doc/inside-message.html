@@ -21,10 +21,10 @@
             <img src="../images/Next.png" />
             <a href="./doc/playfund.html" class="nav-link">My PlayFunds</a>
           </li>
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <img src="../images/Google-play.png" />
             <a href="#" class="nav-link">Play Direct</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <img src="../images/Facebook-messenger.png" />
             <a href="./doc/message.html" class="nav-link">Messages & Notification</a>
@@ -43,7 +43,6 @@
           </li>
         </ul>
         <div class="right">
-            <img src="../images/messenger.png" width="45px" height="30px">
             <div class="hamburger">
               <span class="bar"></span>
               <span class="bar"></span>
@@ -51,7 +50,70 @@
             </div>
         </div>
     </header>
-
+    
+    <main class="main">
+      <div class="official-text">
+        <p>This is an official account of playdirect</p>
+        <img src="../images/Info-circle.png" />
+      </div>
+      
+      <div class="chat-bubble">
+        <div class="sender-container">
+          <p>Playdirect</p>
+          <img src="../images/Approval.png" width="13px" height="13px" />
+        </div>
+        <div class="image-container">
+          <img src="../images/wallpaper13.jpg" />
+        </div>
+        <div class="content-container">
+          <p class="content-title">Hey there, Playdirect Champion! 🏆</p>
+          <p class="content-text">Love gaming with PlayDirect? Share the joy and earn rewards! 🎮</p>
+          <p class="content-text">Introduce your friends to the ultimate gaming top-up platform and help them discover the power of PlayFunds. For each friend you refer, you both get fantastic bonuses!</p>
+          <p class="content-text">Let's team up and make gaming even more epic with PlayFunds. Refer now and game on! 🚀👾 #PlayFundsGamingLegends</p>
+        </div>
+      <p class="copy-link">Copy link</p>
+      </div>
+      
+      <p class="date">25 August 2013</p>
+      
+      <div class="chat-bubble">
+        <div class="sender-container">
+          <p>Playdirect</p>
+          <img src="../images/Approval.png" width="13px" height="13px" />
+        </div>
+        <div class="image-container">
+          <img src="../images/wallpaper13.jpg" />
+        </div>
+        <div class="content-container">
+          <p class="content-title">Hey there, Playdirect Champion! 🏆</p>
+          <p class="content-text">Love gaming with PlayDirect? Share the joy and earn rewards! 🎮</p>
+          <p class="content-text">Introduce your friends to the ultimate gaming top-up platform and help them discover the power of PlayFunds. For each friend you refer, you both get fantastic bonuses!</p>
+          <p class="content-text">Let's team up and make gaming even more epic with PlayFunds. Refer now and game on! 🚀👾 #PlayFundsGamingLegends</p>
+        </div>
+      <p class="copy-link">Copy link</p>
+      </div>
+    </main>
+    
+    <script>
+      // hamburger menu
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      const headTitle = document.querySelector(".head-title");
+    
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        headTitle.classList.toggle("active");
+      })
+      
+      // close button function
+      const close = document.getElementById('close');
+        close.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.close();
+            history.back();
+        });
+    </script>
 </body>
 
 </html>

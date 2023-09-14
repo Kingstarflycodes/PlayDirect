@@ -52,7 +52,7 @@
         <ul class="message-list">
           <li class="message-item">
             <img src="../images/Next.png" />
-            <p class="message-text">We have successfully processed your ...</p>
+            <p id="message" class="message-text">We have successfully processed your ...</p>
           </li>
           <li class="message-item">
             <img src="../images/Next.png" />
@@ -89,22 +89,37 @@
         
         // Clicked message function
         const messageItems = document.querySelectorAll('.message-item');
-
         messageItems.forEach(item => {
           item.addEventListener('click', () => {
             // Check if the clicked item already has the 'clicked' class
             const isClicked = item.classList.contains('clicked');
-
-            // Remove 'clicked' class from all items
-            //messageItems.forEach(item => item.classList.remove('clicked'));
-
             // Add 'clicked' class to the clicked item if it wasn't already clicked
             if (!isClicked) {
             item.classList.add('clicked');
             }
           });
         });
-
+        // JavaScript to fetch text directly from the second page's <p> tag
+        window.addEventListener('load', function () {
+            // Fetch the content from the second page
+            fetch('inside-message.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Extract the text from the <p> tag with class "my-custom-class"
+                    var parser = new DOMParser();
+                    var doc = parser.parseFromString(data, 'text/html');
+                    var textFromSecondPage = doc.querySelector('.first-text').textContent;
+                    // Add ellipsis (...) after the first 20 characters
+                    var truncatedText = textFromSecondPage.slice(0, 35) + '...';
+                    // Display the truncated text in the first paragraph
+                    document.getElementById('message').textContent = truncatedText;
+                    
+                    // Handle click event to redirect to the second page
+                    firstParagraph.addEventListener('click', function () {
+                        window.location.href = 'inside-message.html';
+                    });
+                });
+        });
 
     </script>
 </body>

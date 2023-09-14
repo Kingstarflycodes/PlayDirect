@@ -112,10 +112,11 @@
                     // Add ellipsis (...) after the first 20 characters
                     var truncatedText = textFromSecondPage.slice(0, 35) + '...';
                     // Display the truncated text in the first paragraph
-                    document.getElementById('message').textContent = truncatedText;
+                    var firstPageText = document.getElementById('message');
+                    firstPageText.textContent = truncatedText;
                     
                     // Handle click event to redirect to the second page
-                    firstParagraph.addEventListener('click', function () {
+                    firstPageText.addEventListener('click', function () {
                         window.location.href = 'inside-message.html';
                     });
                 });

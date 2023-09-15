@@ -196,8 +196,8 @@ header img{
     margin: 1rem 0 0 1rem;
 }
 .swiper {
-  width: 92%;
-  /*margin: 1rem 0;*/
+  width: 95%;
+  margin: 1rem 0 1rem 5%;
 }
 .swiper-wrapper {
   width: 92%;

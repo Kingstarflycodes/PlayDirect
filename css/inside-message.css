@@ -40,7 +40,13 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0.8rem 1rem;
+    padding: 0.6rem 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 1100;
 }
 .head {
   display: flex;
@@ -121,12 +127,12 @@ header img{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 51%;
+  width: 54%;
   padding: .1rem .5rem;
   border-radius: 1rem;
   border: none;
   background-color: rgba(250, 250, 250, .5);
-  margin: 1rem auto .5rem auto;
+  margin: 3.8rem auto .8rem auto;
 }
 .official-text p {
   font-size: .6rem;
@@ -167,6 +173,9 @@ header img{
   width: 100%;
   height: 7rem;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .image-container img {
   width: 100%;

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../css/inside-message.css" />
   <title>Messages</title>
 </head>
-<body>
+<body onload="scrollToSection()">
   <header>
         <div class="head">
           <p id="close">&times;</p>
@@ -108,11 +108,26 @@
       
       // close button function
       const close = document.getElementById('close');
-        close.addEventListener('click', function(event) {
-            event.preventDefault();
-            window.close();
-            history.back();
-        });
+      close.addEventListener('click', function(event) {
+          event.preventDefault();
+          window.close();
+          history.back();
+      });
+      
+      //add last-message id to last cpy link element
+      const copylinkElements = document.querySelectorAll('.copy-link');
+      copylinkElements.forEach(element => {
+          element.removeAttribute('id');
+      });
+      const lastCopylinkElement = copylinkElements[copylinkElements.length - 1];
+      lastCopylinkElement.id = 'last-message';
+
+        
+      // scroll to last message onload
+      function scrollToSection() {
+        const targetSection = document.getElementById('last-message');
+        targetSection.scrollIntoView({ behavior: 'smooth' })
+      }
     </script>
 </body>
 

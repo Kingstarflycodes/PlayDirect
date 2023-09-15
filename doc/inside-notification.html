@@ -50,7 +50,37 @@
         </div>
     </header>
     
-    <p></p>
+    <main class="main">
+      <div class="official-text">
+        <p>This is an official account of playdirect</p>
+        <img src="../images/Info-circle.png" />
+      </div>
+      
+      <p class="notification-text">"Good news. [User]! Your Playdirect account has been successfully funded with [Amount]. Get ready to power up your gaming experience and conquer new levels!🚀🎮</p>
+      <p class="notification-text">"Congratulations, [User]! You've earned [Cash Back Amount] in cashback rewards. Your loyalty to Playdirect is paying off - enjoy the extra gaming power!💰🎉</p>
+      <p class="date">25 August 2023</p>
+      <p class="notification-text">Oops! It seems there was an issue with your recent transaction. Please check your payment details and try again. If you need assistance, our support team is here to help.🛠️🚫</p>
+      <p class="time">11:23 am</p>
+      <p class="notification-text test">"We're sorry [User]. Your payment for [Transaction] has been declined. Please review your payment method or contact your financial institution for assistance. We're here to assist you if needed.🙁📰</p>
+    </main>
 
+    
+    <script>
+      
+      //add last-notification id to last notification element
+      const notificationElements = document.querySelectorAll('.notification-text');
+      notificationElements.forEach(element => {
+          element.removeAttribute('id');
+      });
+      const lastNotificationElement = notificationElements[notificationElements.length - 1];
+      lastNotificationElement.id = 'last-notification';
+
+        
+      // scroll to last message onload
+      function scrollToSection() {
+        const targetSection = document.getElementById('last-notification');
+        targetSection.scrollIntoView({ behavior: 'smooth' })
+      }
+    </script>
 </body>
 </html>

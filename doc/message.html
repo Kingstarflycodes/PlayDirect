@@ -56,7 +56,7 @@
           </li>
           <li class="message-item">
             <img src="../images/Next.png" />
-            <p class="message-text">Account successfully funded ...</p>
+            <p id="notification" class="message-text"></p>
           </li>
         </ul>
 
@@ -108,7 +108,7 @@
                     // Extract the text from the <p> tag with class "my-custom-class"
                     var parser = new DOMParser();
                     var doc = parser.parseFromString(data, 'text/html');
-                    var textFromSecondPage = doc.querySelector('.first-text').textContent;
+                    var textFromSecondPage = doc.querySelector('.shown-text').textContent;
                     // Add ellipsis (...) after the first 20 characters
                     var truncatedText = textFromSecondPage.slice(0, 35) + '...';
                     // Display the truncated text in the first paragraph
@@ -121,6 +121,29 @@
                     });
                 });
         });
+        
+        window.addEventListener('load', function () {
+          // Fetch the content from the new page
+          fetch('inside-notification.html')
+            .then(response => response.text())
+            .then(data => {
+              // Extract the text from the <p> tag with a different class or ID
+              var parser = new DOMParser();
+              var doc = parser.parseFromString(data, 'text/html');
+              var textFromAnotherPage = doc.querySelector('.test').textContent;
+              // Add ellipsis (...) after the first 35 characters
+              var truncatedText = textFromAnotherPage.slice(0, 35) + '...';
+              // Display the truncated text in the desired element
+              var targetElement = document.getElementById('notification');
+              targetElement.textContent = truncatedText;
+
+              // Handle click event to redirect to the new page
+              targetElement.addEventListener('click', function () {
+                window.location.href = 'inside-notification.html';
+              });
+            });
+        });
+
 
     </script>
 </body>

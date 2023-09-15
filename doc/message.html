@@ -130,7 +130,7 @@
               // Extract the text from the <p> tag with a different class or ID
               var parser = new DOMParser();
               var doc = parser.parseFromString(data, 'text/html');
-              var textFromAnotherPage = doc.querySelector('.test').textContent;
+              var textFromAnotherPage = doc.querySelector('#last-notification').textContent;
               // Add ellipsis (...) after the first 35 characters
               var truncatedText = textFromAnotherPage.slice(0, 35) + '...';
               // Display the truncated text in the desired element

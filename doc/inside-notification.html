@@ -66,6 +66,24 @@
 
     
     <script>
+      // hamburger menu
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      const headTitle = document.querySelector(".head-title");
+    
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        headTitle.classList.toggle("active");
+      })
+      
+      // close button function
+      const close = document.getElementById('close');
+      close.addEventListener('click', function(event) {
+          event.preventDefault();
+          window.close();
+          history.back();
+      });
       
       document.addEventListener('DOMContentLoaded', () => {
           const notificationElements = document.querySelectorAll('.notification-text');

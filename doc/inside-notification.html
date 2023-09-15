@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../css/inside-notification.css" />
   <title>Notifications</title>
 </head>
-<body>
+<body onload="scrollToSection()">
   <header>
         <div class="head">
           <p id="close">&times;</p>
@@ -61,22 +61,22 @@
       <p class="date">25 August 2023</p>
       <p class="notification-text">Oops! It seems there was an issue with your recent transaction. Please check your payment details and try again. If you need assistance, our support team is here to help.🛠️🚫</p>
       <p class="time">11:23 am</p>
-      <p class="notification-text">"We're sorry [User]. Your payment for [Transaction] has been declined. Please review your payment method or contact your financial institution for assistance. We're here to assist you if needed.🙁📰</p>
+      <p class="notification-text last-text">"We're sorry [User]. Your payment for [Transaction] has been declined. Please review your payment method or contact your financial institution for assistance. We're here to assist you if needed.🙁📰</p>
     </main>
 
     
     <script>
       
-      //add last-notification id to last notification element
-      const notificationElements = document.querySelectorAll('.notification-text');
-      notificationElements.forEach(element => {
-          element.removeAttribute('id');
+      document.addEventListener('DOMContentLoaded', () => {
+          const notificationElements = document.querySelectorAll('.notification-text');
+          notificationElements.forEach(element => {
+              element.removeAttribute('id');
+          });
+          const lastNotificationElement = notificationElements[notificationElements.length - 1];
+          lastNotificationElement.id = 'last-notification';
       });
-      const lastNotificationElement = notificationElements[notificationElements.length - 1];
-      lastNotificationElement.id = 'last-notification';
 
-        
-      // scroll to last message onload
+      // scroll to last notification onload
       function scrollToSection() {
         const targetSection = document.getElementById('last-notification');
         targetSection.scrollIntoView({ behavior: 'smooth' })

@@ -83,7 +83,7 @@
     <div class="swiper">
     <div class="swiper-wrapper most-played">
       <div class="swiper-slide">
-        <div class="wrap">
+        <div class="wrap" onclick="redirectToSecondPage('./doc/top up.html')">
             <div class="game-img">
                 <img src="./images/wallpaper13.jpg" alt="">
             </div>
@@ -98,7 +98,7 @@
             </div>
         </div>
 
-        <div class="wrap">
+        <div class="wrap" onclick="redirectToSecondPage('./doc/top up.html')">
             <div class="game-img">
                 <img src="./images/wallpaper13.jpg" alt="">
             </div>
@@ -113,7 +113,7 @@
             </div>
         </div>
 
-        <div class="wrap">
+        <div class="wrap" onclick="redirectToSecondPage('./doc/top up.html')">
             <div class="game-img">
                 <img src="./images/wallpaper13.jpg" alt="">
             </div>
@@ -129,7 +129,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <div class="wrap">
+        <div class="wrap" onclick="redirectToSecondPage('./doc/top up.html')">
             <div class="game-img">
                 <img src="./images/wallpaper13.jpg" alt="">
             </div>
@@ -144,7 +144,7 @@
             </div>
         </div>
 
-        <div class="wrap">
+        <div class="wrap" onclick="redirectToSecondPage('./doc/top up.html')">
             <div class="game-img">
                 <img src="./images/wallpaper13.jpg" alt="">
             </div>
@@ -159,7 +159,7 @@
             </div>
         </div>
 
-          <div class="wrap">
+          <div class="wrap" onclick="redirectToSecondPage('./doc/top up.html')">
             <div class="game-img">
                 <img src="./images/wallpaper13.jpg" alt="">
             </div>
@@ -181,7 +181,7 @@
     <div class="swiper">
     <div class="swiper-wrapper moba">
       <div class="swiper-slide">
-        <div class="wrap">
+        <div class="wrap" onclick="redirectToSecondPage('./doc/top up.html')">
             <div class="game-img">
                 <img src="./images/wallpaper13.jpg" alt="">
             </div>
@@ -196,7 +196,7 @@
             </div>
         </div>
 
-        <div class="wrap">
+        <div class="wrap" onclick="redirectToSecondPage('./doc/top up.html')">
             <div class="game-img">
                 <img src="./images/wallpaper13.jpg" alt="">
             </div>
@@ -211,7 +211,7 @@
             </div>
         </div>
 
-        <div class="wrap">
+        <div class="wrap" onclick="redirectToSecondPage('./doc/top up.html')">
             <div class="game-img">
                 <img src="./images/wallpaper13.jpg" alt="">
             </div>
@@ -227,7 +227,7 @@
         </div>
       </div>
       <div class="swiper-slide">
-         <div class="wrap">
+         <div class="wrap" onclick="redirectToSecondPage('./doc/top up.html')">
             <div class="game-img">
                 <img src="./images/wallpaper13.jpg" alt="">
             </div>
@@ -242,7 +242,7 @@
             </div>
         </div>
 
-        <div class="wrap">
+        <div class="wrap" onclick="redirectToSecondPage('./doc/top up.html')">
             <div class="game-img">
                 <img src="./images/wallpaper13.jpg" alt="">
             </div>
@@ -257,7 +257,7 @@
             </div>
         </div>
 
-          <div class="wrap">
+          <div class="wrap" onclick="redirectToSecondPage('./doc/top up.html')">
             <div class="game-img">
                 <img src="./images/wallpaper13.jpg" alt="">
             </div>
@@ -317,8 +317,12 @@
         slidesPerView: 1.07,
         spaceBetween: 10,
       });
-   
       
+      //On the click of any wrap class it should redirect to top up page
+      function redirectToSecondPage(pageUrl) {
+        window.location.href = pageUrl;
+      }
+
     </script>
 
 

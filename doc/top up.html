@@ -8,21 +8,52 @@
     <title>Top  up</title>
 </head>
 <body>
-    <div class="top">
-        <img src="../images/download (1).png" alt="">
-        <img src="../images/hamburger-menu.svg" alt="">
-    </div>
-
-        <h2 class="header">Top Up</h2>
-
-        <div class="wrapper">
-
+    <header>
+        <div class="head">
+          <p id="close">&times;</p>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <img src="../images/Next.png" />
+            <a href="./doc/playfund.html" class="nav-link">My PlayFunds</a>
+          </li>
+          <!--<li class="nav-item">
+            <img src="../images/Google-play.png" />
+            <a href="#" class="nav-link">Play Direct</a>
+          </li> -->
+          <li class="nav-item">
+            <img src="../images/Facebook-messenger.png" />
+            <a href="./doc/message.html" class="nav-link">Messages & Notification</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Comment.png" />
+            <a href="./doc/help.html" class="nav-link">Help & Feedback</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Settings-alt.png" />
+            <a href="./doc/setting.html" class="nav-link">Settings</a>
+          </li>
+          <li class="nav-item">
+            <img src="../images/Envelope.png" />
+            <a href="./doc/contact.html" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+        <div class="right">
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+    <h2 class="top-up">Top Up</h2>
+  <div class="wrapper">
     <div class="profile">
         <div class="left">
             <img src="../images/wallpaper13.jpg" alt="" width="90px">
         </div>
         <div class="right">
-            <div class="user-name">
+            <div class="game-name">
                 <p>GENSHIN IMPACT</p>
                 <button>crystals</button>
             </div>
@@ -31,32 +62,32 @@
 
     <div class="item">
         <div class="box">
-            <h2>ID or Username</h2>
+            <p>ID or Username</p>
             <input type="text" placeholder="Riderezzy#2358">
         </div>
     </div>
 
     <div class="recharge">
-        <h2>Select Recharge</h2>
+        <p class="recharge-text">Select Recharge</p>
         <div class="flex-sub">
             <p>60 genesis crystals</p>
-            <div class="price">Rp.16,000</div>
+            <p class="price">N16,000</p>
         </div>
         <div class="flex-sub">
-            <p>60 genesis crystals</p>
-            <div class="price">Rp.16,000</div>
+            <p>300 + 30 genesis crystals</p>
+            <p class="price">N79,000</p>
         </div>
         <div class="flex-sub">
-            <p>60 genesis crystals</p>
-            <div class="price">Rp.16,000</div>
+            <p>500 + 30 genesis crystals</p>
+            <p class="price">N100,000</p>
         </div>
         <div class="flex-sub">
-            <p>60 genesis crystals</p>
-            <div class="price">Rp.16,000</div>
+            <p>800 + 30 genesis crystals</p>
+            <p class="price">N150,000</p>
         </div>
         <div class="flex-sub">
-            <p>60 genesis crystals</p>
-            <div class="price">Rp.16,000</div>
+            <p>1000 + 30 genesis crystals</p>
+            <p class="price">N250,000</p>
         </div>
         <div class="btns">
             <button class="buy">Buy</button>
@@ -64,18 +95,57 @@
         </div>
     </div>
 
-    <div class="last-img">
-        <img src="../images/IMG-20230722-WA0003.jpg" alt="" width="300px">
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide">
+          <img src="../images/IMG-20230722-WA0003.jpg" alt="" width="300px">
+        </div>
+        <div class="slide">
+          <img src="../images/IMG-20230722-WA0003.jpg" alt="" width="300px">
+        </div>
+        <div class="slide">
+          <img src="../images/IMG-20230722-WA0003.jpg" alt="" width="300px">
+        </div>
+        <div class="slide">
+          <img src="../images/IMG-20230722-WA0003.jpg" alt="" width="300px">
+        </div>
+      </div>
+      <div class="slider-checks">
+        <span class="check" data-index="0"></span>
+        <span class="check" data-index="1"></span>
+        <span class="check" data-index="2"></span>
+        <span class="check" data-index="3"></span>
+      </div>
     </div>
-</div>
-      
+  </div>
+   
+   
+<script src="../js/script.js"></script>
 <script>
-    const flexSub=document.querySelectorAll(".flex-sub");
-    flexSub.forEach(sub=>{
-        sub.addEventListener("click",()=>{
-            sub.classList.toggle("select")
-        })
-    })
+      // hamburger menu
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      const headTitle = document.querySelector(".head-title");
+    
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+        headTitle.classList.toggle("active");
+      })
+      
+    // Select when clicked function
+    const flexSub = document.querySelectorAll(".flex-sub");
+        flexSub.forEach(sub => {
+          sub.addEventListener("click", () => {
+            // Remove "select" class from all elements
+            flexSub.forEach(item => {
+              item.classList.remove("select");
+            });
+            // Add "select" class to the clicked element
+            sub.classList.add("select");
+        });
+    });
+
 </script>
 
 </body>

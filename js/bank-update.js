@@ -4,13 +4,32 @@ function openPageTwo() {
 
 function updatePageOne() {
   const bankName = document.getElementById('bankNameInput').value;
-  const lastDigits = document.getElementById('accNumberInput').value;
+  const accNumberInput = document.getElementById('accNumberInput').value;
 
-  const bankNameElement = window.opener.document.querySelector('.bank-name p');
-  const lastDigitsElement = window.opener.document.querySelector('.acc-number p:last-child');
+  // Extract last four digits
+  const lastFourDigits = accNumberInput.slice(-4);
 
-  bankNameElement.innerText = bankName;
-  lastDigitsElement.innerText = lastDigits;
+  // Store the values in localStorage
+  localStorage.setItem('bankName', bankName);
+  localStorage.setItem('lastFourDigits', lastFourDigits);
   
-  window.close();
+  window.location.href = '../doc/confirm-details.html';
 }
+
+// Retrieve and update values from localStorage on page load
+window.onload = function() {
+  const storedBankName = localStorage.getItem('bankName');
+  const storedLastFourDigits = localStorage.getItem('lastFourDigits');
+
+  if (storedBankName && storedLastFourDigits) {
+    const bankNameElement = document.querySelector('.bank-name p');
+    const lastDigitsElement = document.getElementById('lastDigits');
+
+    bankNameElement.innerText = storedBankName;
+    lastDigitsElement.innerText = storedLastFourDigits;
+  }
+
+  // Clear the stored values from localStorage
+  localStorage.removeItem('bankName');
+  localStorage.removeItem('lastFourDigits');
+};

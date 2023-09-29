@@ -52,10 +52,82 @@
       <p>Account number</p>
       <input id="accNumberInput" type="text" />
       <p>Bank name</p>
-      <input id="bankNameInput" type="text" />
+      <input id="bankNameInput" readonly onclick="showBankList()" />
+      <div id="bankList">
+        <ul class="list-cont">
+          <li onclick="selectBank(this)">Accion Microfinance Bank</li>
+          <li onclick="selectBank(this)">Access Bank Plc</li>
+          <li onclick="selectBank(this)">Advans La Fayette Microfinance Bank</li>
+          <li onclick="selectBank(this)">Citibank Nigeria Limited</li>
+          <li onclick="selectBank(this)">Covenant Microfinance Bank Ltd</li>
+          <li onclick="selectBank(this)">Coronation Merchant Bank</li>
+          <li onclick="selectBank(this)">Dot Microfinance Bank</li>
+          <li onclick="selectBank(this)">Ecobank Nigeria</li>
+          <li onclick="selectBank(this)">Empire Trust Microfinance Bank</li>
+          <li onclick="selectBank(this)">FBNQuest Merchant Bank</li>
+          <li onclick="selectBank(this)">Fidelity Bank Plc</li>
+          <li onclick="selectBank(this)">Fina Trust Microfinance Bank</li>
+          <li onclick="selectBank(this)">Finca Microfinance Bank Limited</li>
+          <li onclick="selectBank(this)">First Bank of Nigeria Limited</li>
+          <li onclick="selectBank(this)">First City Monument Bank Limited</li>
+          <li onclick="selectBank(this)">FSDH Merchant Bank</li>
+          <li onclick="selectBank(this)">Globus Bank Limited</li>
+          <li onclick="selectBank(this)">Guaranty Trust Bank Plc</li>
+          <li onclick="selectBank(this)">Heritage Bank Plc</li>
+          <li onclick="selectBank(this)">Infinity Microfinance Bank</li>
+          <li onclick="selectBank(this)">Jaiz Bank Plc</li>
+          <li onclick="selectBank(this)">Keystone Bank Limited</li>
+          <li onclick="selectBank(this)">Kuda Bank</li>
+          <li onclick="selectBank(this)">LOTUS BANK</li>
+          <li onclick="selectBank(this)">Mint Finex MFB</li>
+          <li onclick="selectBank(this)">Mkobo MFB</li>
+          <li onclick="selectBank(this)">Moniepoint Microfinance Bank</li>
+          <li onclick="selectBank(this)">Mutual Trust Microfinance Bank</li>
+          <li onclick="selectBank(this)">Nova Merchant Bank</li>
+          <li onclick="selectBank(this)">Opay</li>
+          <li onclick="selectBank(this)">Optimus Bank Limited</li>
+          <li onclick="selectBank(this)">Palmpay</li>
+          <li onclick="selectBank(this)">Parallex Bank Limited</li>
+          <li onclick="selectBank(this)">Peace Microfinance Bank</li>
+          <li onclick="selectBank(this)">Pearl Microfinance Bank Limited</li>
+          <li onclick="selectBank(this)">PremiumTrust Bank Limited</li>
+          <li onclick="selectBank(this)">Providus Bank Limited</li>
+          <li onclick="selectBank(this)">Raven bank</li>
+          <li onclick="selectBank(this)">Rand Merchant Bank</li>
+          <li onclick="selectBank(this)">Rephidim Microfinance Bank</li>
+          <li onclick="selectBank(this)">Rex Microfinance Bank</li>
+          <li onclick="selectBank(this)">Rubies Bank</li>
+          <li onclick="selectBank(this)">Shepherd Trust Microfinance Bank</li>
+          <li onclick="selectBank(this)">Sparkle Bank</li>
+          <li onclick="selectBank(this)">Stanbic IBTC Bank Plc</li>
+          <li onclick="selectBank(this)">Standard Chartered</li>
+          <li onclick="selectBank(this)">Sterling Bank Plc</li>
+          <li onclick="selectBank(this)">SunTrust Bank Nigeria Limited</li>
+          <li onclick="selectBank(this)">TAJBank Limited</li>
+          <li onclick="selectBank(this)">Titan Trust bank</li>
+          <li onclick="selectBank(this)">Union Bank of Nigeria Plc</li>
+          <li onclick="selectBank(this)">United Bank for Africa Plc</li>
+          <li onclick="selectBank(this)">Unity Bank Plc</li>
+          <li onclick="selectBank(this)">VFD Microfinance Bank</li>
+          <li onclick="selectBank(this)">Wema Bank Plc</li>
+          <li onclick="selectBank(this)">Zenith Bank Plc</li>
+        </ul>
+      </div>
       <button class="bank-btn" onclick="updatePageOne()">SAVE</button>
     </main>
     
     <script src="../js/bank-update.js"></script>
+    <script>
+      function showBankList() {
+        var bankListDiv = document.getElementById("bankList");
+        bankListDiv.style.display = (bankListDiv.style.display === "none" || bankListDiv.style.display === "") ? "block" : "none";
+      }
+
+      function selectBank(element) {
+        var selectedBank = element.innerText;
+        document.getElementById("bankNameInput").value = selectedBank;
+        document.getElementById("bankList").style.display = "none";
+      }
+    </script>
 </body>
 </html>

@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="../css/add-bank.css">
     <title>Add bank details</title>
 </head>
-<body>
+<body onload="updateAccount()">
     <header>
         <div class="head">
           <p id="close">&times;</p>
-          <h2 class="head-title">Notification</h2>
         </div>
         <ul class="nav-menu">
           <li class="nav-item">
@@ -48,7 +47,41 @@
         </div>
     </header>
     <main class="main">
-      
+      <h2>Add bank account</h2>
+      <p class="enter-text">Please enter you bank account details </p>
+      <p>Account number</p>
+      <input id="accNum" type="text" />
+      <p>Bank name</p>
+      <input id="bankName" type="text" />
+      <button class="bank-btn" onclick="saveAccount()">SAVE</button>
     </main>
+    
+    <script>
+      function saveAccount() {
+            // Get the input values
+            var accNum = document.getElementById("accNum").value;
+            var bankName = document.getElementById("bankName").value;
+            // Store them in the local storage
+            localStorage.setItem("accNum", accNum);
+            localStorage.setItem("bankName", bankName);
+            window.location.href = "confirm-details.html";
+        }
+        // This function will update the selected-acc div with the stored values
+        function updateAccount() {
+            // Get the stored values
+            var accNum = localStorage.getItem("accNum");
+            var bankName = localStorage.getItem("bankName");
+            // If they are not null, update the selected-acc div
+            if (accNum && bankName) {
+                // Get the last four digits of the account number
+                var lastFour = accNum.slice(-4);
+                var bankNameElem = document.querySelector(".bank-name-text");
+                var accNumElem = document.querySelector(".four-digits");
+                // Update the elements with the stored values
+                bankNameElem.textContent = bankName;
+                accNumElem.textContent = lastFour;
+            }
+        }
+    </script>
 </body>
 </html>

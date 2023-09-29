@@ -104,4 +104,37 @@ header img{
     width: 28px;
     cursor: pointer;
 }
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: .3rem 2.3rem;
+}
+.main h2 {
+  font-size: 1.2rem;
+  margin-bottom: .6rem;
+}
+.main p {
+  font-size: .9rem;
+}
+.enter-text {
+  margin-bottom: .6rem;
+}
+.main input {
+  width: 100%;
+  height: 1.8rem;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  margin-bottom: .3rem;
+  outline: none;
+}
+.bank-btn {
+  width: 100%;
+  padding: .3rem;
+  border: none;
+  background: #329832;
+  color: #fff;
+  font-weight: 600;
+  border-radius: .2rem;
+  margin-top: 3.5rem;
+}
 }

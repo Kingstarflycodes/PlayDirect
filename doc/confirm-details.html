@@ -89,18 +89,18 @@
             </div>
         </div>
         
-        <div class="select-account">
+        <div class="select-account" onclick="openPage2()">
             <div class="tag">+</div>
             <div class="text">Add account</div>
         </div>
 
         <div class="selected-acc">
             <div class="bank-name">
-                <p>PalmPay</p>
+                <p class="bank-name-text">PalmPay</p>
             </div>
             <div class="acc-number">
-                <p>*******</p>
-                <p>1516</p>
+                <p>******</p>
+                <p class="four-digits">1516</p>
             </div>
         </div>
 
@@ -183,6 +183,11 @@
             // Display an error message
             errorMessage.textContent = "Check options";
           }
+        }
+        
+        //Add account function
+        function openPage2() {
+            window.location.href = "add-bank.html";
         }
 
     </script>

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/add-bank.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Add bank details</title>
 </head>
 <body onload="updateAccount()">
@@ -53,6 +54,7 @@
       <input id="accNumberInput" type="text" />
       <p>Bank name</p>
       <input id="bankNameInput" readonly onclick="showBankList()" />
+      <i class='bx bx-chevron-right'></i>
       <div id="bankList">
         <ul class="list-cont">
           <li onclick="selectBank(this)">Accion Microfinance Bank</li>

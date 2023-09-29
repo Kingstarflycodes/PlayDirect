@@ -108,6 +108,7 @@ header img{
   display: flex;
   flex-direction: column;
   padding: .3rem 2.3rem;
+  position: relative;
 }
 .main h2 {
   font-size: 1.2rem;
@@ -126,6 +127,13 @@ header img{
   border-bottom: 1px solid rgba(0, 0, 0, .1);
   margin-bottom: .3rem;
   outline: none;
+}
+.bx-chevron-right {
+  font-size: 1.8rem;
+  color: rgba(0, 0, 0, .1);
+  position: absolute;
+  right: 2rem;
+  top: 54%;
 }
 #bankList {
   display: none;

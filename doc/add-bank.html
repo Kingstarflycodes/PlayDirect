@@ -121,6 +121,16 @@
     
     <script src="../js/bank-update.js"></script>
     <script>
+      //hamburger menu
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      })
+      
+      //bank list function
       function showBankList() {
         var bankListDiv = document.getElementById("bankList");
         bankListDiv.style.display = (bankListDiv.style.display === "none" || bankListDiv.style.display === "") ? "block" : "none";

@@ -49,7 +49,6 @@
     </header>
 
     <main class="main">
-      <p id="errorText" style="color: red;"></p>
     <p class="text">How much would you like to  deposit?</p>
 
     <div class="container">
@@ -57,6 +56,7 @@
             <p class="tag">N</p>
             <p id="depositAmount" class="amount">0.00</p>
         </div>
+        <p id="errorText" style="color: red; font-size: .8rem"></p>
 
         <ul id="myList" class="input-amount">
             <li class="numb">1</li>
@@ -133,10 +133,14 @@
             var deposit = parseInt(document.getElementById("depositAmount").textContent.replace(/,/g, ''));
             if (deposit <= 4999 || isNaN(deposit)) {
                 document.getElementById("errorText").innerText = "Minimum deposit is N5,000";
+                setTimeout(function() {
+                  document.getElementById("errorText").innerText = "";
+                }, 5000); // 5000 milliseconds = 5 seconds
             } else {
-                // Redirect to the second page and pass the deposit value as a query parameter
-                window.location.href = "confirm-details.html?deposit=" + deposit;
+              // Redirect to the second page and pass the deposit value as a query parameter
+              window.location.href = "confirm-details.html?deposit=" + deposit;
             }
+
         }
 </script>
 </html>

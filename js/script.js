@@ -3,6 +3,7 @@
 const slides = document.querySelectorAll('.slide');
 const slider = document.querySelector('.slider');
 const sliderChecks = document.querySelectorAll('.check');
+let startX, endX;
 
 let currentSlide = 0;
 
@@ -11,6 +12,28 @@ sliderChecks.forEach((check, index) => {
     goToSlide(index);
   });
 });
+
+slider.addEventListener('touchstart', touchStart, false);
+slider.addEventListener('touchend', touchEnd, false);
+
+function touchStart(event) {
+  startX = event.touches[0].clientX;
+}
+
+function touchEnd(event) {
+  endX = event.changedTouches[0].clientX;
+  handleGesture();
+}
+
+function handleGesture() {
+  if (startX < endX) {
+    // Swiped right
+    goToSlide(currentSlide - 1);
+  } else if (startX > endX) {
+    // Swiped left
+    goToSlide(currentSlide + 1);
+  }
+}
 
 function goToSlide(index) {
   if (index >= 0 && index < slides.length) {

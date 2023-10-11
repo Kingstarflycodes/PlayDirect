@@ -50,6 +50,29 @@
         </div>
     </header>
     
+    <main class="main">
+      <div class="amount-box">
+        <p class="reward-text">Total Rewards Earned</p>
+        <div class="total-amount">
+          <p>250</p>
+          <img src="../images/Frame 22.png" />
+        </div>
+        <div class="monthly-amount">
+          <p>Earned in <span class="month"></span></p>
+          <p>100</p>
+        </div>
+      </div>
+      <div class="cash-ref-box">
+      <div class="cashback">
+        <p>Cash back</p>
+        <i class='bx bx-chevron-right'></i>
+      </div>
+      <div class="referral">
+        <p>Referrals</p>
+        <i class='bx bx-chevron-right'></i>
+      </div>
+      </div>
+    </main>
     
     <script>
       //hamburger menu
@@ -60,6 +83,12 @@
         hamburger.classList.toggle("active");
         navMenu.classList.toggle("active");
       })
+      
+      //Print out month we are in for span element
+      const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      const currentMonth = new Date().getMonth();
+      const monthElement = document.querySelector('.month');
+      monthElement.textContent = months[currentMonth];
     </script>
 </body>
 </html>

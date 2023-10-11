@@ -60,7 +60,7 @@
         <p class="reward">Rewards</p>
         <p class="earned">You have earned a total of 1,000 in rewards</p>
         <p class="line"></p>
-        <div class="reward-grid">
+        <div onclick="openRewardPage()" class="reward-grid">
           <p class="view">View Rewards</p>
           <i class='bx bx-chevron-right'></i>
         </div>
@@ -165,6 +165,10 @@
             history.back();
         });
       
+      //open reward page
+      function openRewardPage() {
+        window.open('./rewards.html');
+      }
     </script>
 </body>
 </html>;

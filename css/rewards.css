@@ -18,7 +18,7 @@ body{
 button {
   font-family: Expletus-Sans-Light;
 }
-@media screen and (max-width:800px){
+@media screen and (max-width: 800px){
 li {
   list-style: none;
 }
@@ -51,7 +51,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 42%;
+  width: 35%;
   margin: 0;
 }
 #close {
@@ -108,5 +108,74 @@ header .right{
 header img{
     width: 28px;
     cursor: pointer;
+}
+.main {
+  width: 80%;
+  margin: 0 auto;
+}
+.amount-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.3px solid rgba(0, 0, 0, .8);
+  border-radius: 1rem;
+  padding: .5rem;
+  margin-top: 2rem;
+}
+.reward-text {
+  font-size: 1.3rem;
+  margin-bottom: 1.1rem;
+}
+.total-amount {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.1rem;
+}
+.total-amount p {
+  font-size: 1.3rem;
+  margin-right: .2rem;
+}
+.total-amount img {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: .2rem;
+}
+.monthly-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  background: #329832;
+  padding: .1rem .3rem;
+  color: #fff;
+  border-radius: .3rem;
+  margin-bottom: .4rem;
+}
+.cash-ref-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+.cashback, .referral {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: .5rem 1.8rem;
+  position: relative;
+}
+.cashback:after {
+  content: "";
+  width: 96%;
+  height: 1px;
+  position: absolute;
+  background: rgba(0, 0, 0, .1);
+  left: .3rem;
+  bottom: -.2rem;
+}
+.bx-chevron-right {
+  font-size: 1.1rem;
+  color: #329832;
 }
 }

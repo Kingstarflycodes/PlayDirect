@@ -5,15 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/rewards.css">
+  <link rel="stylesheet" href="../css/cashback.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <title>Rewards</title>
+  <title>Cashback</title>
 </head>
 <body>
   <header>
         <div class="head">
           <p id="close">&times;</p>
-          <h2 class="head-title">Rewards</h2>
         </div>
         <ul class="nav-menu">
           <li class="nav-item">
@@ -52,7 +51,7 @@
     
     <main class="main">
       <div class="amount-box">
-        <p class="reward-text">Total Rewards Earned</p>
+        <p class="cashback-text">Total Cash Back Earned</p>
         <div class="total-amount">
           <p>250</p>
           <img src="../images/Frame 22.png" />
@@ -62,15 +61,20 @@
           <p>100</p>
         </div>
       </div>
-      <div class="cash-ref-box">
-      <div class="cashback">
-        <p>Cash back</p>
-        <i class='bx bx-chevron-right'></i>
-      </div>
-      <div class="referral">
-        <p>Referrals</p>
-        <i class='bx bx-chevron-right'></i>
-      </div>
+      <div class="activity-box">
+        <p class="activity-text">Activity</p>
+        <div class="cashback-detail">
+          <img src="../images/Frame 22.png" />
+          <p class="cashback">Cask Back</p>
+          <p class="date">7/7/2023</p>
+          <p class="daily-amount">140</p>
+        </div>
+        <div class="cashback-detail">
+          <img src="../images/Frame 22.png" />
+          <p class="cashback">Cask Back</p>
+          <p class="date">7/7/2023</p>
+          <p class="daily-amount">100</p>
+        </div>
       </div>
     </main>
     
@@ -86,22 +90,11 @@
       
       // close button function
       const close = document.getElementById('close');
-        close.addEventListener('click', function(event) {
-            event.preventDefault();
-            window.close();
-            history.back();
-        });
-      
-      //Print out month we are in for span element
-      const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-      const currentMonth = new Date().getMonth();
-      const monthElement = document.querySelector('.month');
-      monthElement.textContent = months[currentMonth];
-      
-      const cashBack = document.querySelector('.cashback');
-      cashBack.addEventListener('click', () => {
-        window.open('./cashback.html', '_self');
-      })
+      close.addEventListener('click', function(event) {
+          event.preventDefault();
+          window.close();
+          history.back();
+      });
     </script>
 </body>
 </html>

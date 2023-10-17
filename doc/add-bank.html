@@ -51,7 +51,7 @@
       <h2>Add bank account</h2>
       <p class="enter-text">Please enter you bank account details </p>
       <p>Account number</p>
-      <input id="accNumberInput" type="text" />
+      <input id="accNumberInput" type="text" oninput="validateInput(this)" maxlength="10" />
       <p>Bank name</p>
       <input id="bankNameInput" readonly onclick="showBankList()" />
       <i class='bx bx-chevron-right'></i>
@@ -129,6 +129,12 @@
         hamburger.classList.toggle("active");
         navMenu.classList.toggle("active");
       })
+      
+      //account number input
+      function validateInput(input) {
+        const regex = /[^0-9]/g;
+        input.value = input.value.replace(regex, '');
+      }
       
       //bank list function
       function showBankList() {

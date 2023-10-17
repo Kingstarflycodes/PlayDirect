@@ -245,7 +245,8 @@ header img{
   font-size: 1rem;
 }
 .event {
-  width: 90%;
+  width: 21.5rem;
+  margin: .5rem 0;
 }
 .img-date {
   width: 98%;
@@ -270,7 +271,7 @@ header img{
 .event-img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
 .event-wrap-child {
   margin-left: 0.4rem;
